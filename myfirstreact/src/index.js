@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './app.css'; // Import regular stylesheet
 
-const myfirstelement = (<h1>Hello React!</h1>);
+const myfirstelement = (<h1>Hello React!!!!</h1>);
 
 ReactDOM.render(myfirstelement, document.getElementById('root'));
 
@@ -20,6 +21,8 @@ ReactDOM.render(myfirstelement, document.getElementById('root'));
 //);
 //
 //ReactDOM.render(secondelement, document.getElementById('test'));
+
+// Tic Tac Toe
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -27,7 +30,6 @@ function Square(props) {
     </button>
   );
 }
-// Tic Tac Toe
 class Board extends React.Component {
   constructor(props) {
     super(props);
