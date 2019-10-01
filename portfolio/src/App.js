@@ -5,7 +5,7 @@ import SideBar from './components/SideBar/SideBar';
 class App extends Component {
     render() {
         return(
-            <div className="App">
+            <div style={{height: '100%'}}>
                 <Toolbar />
                 <SideBar />
                 <main style={{marginTop: '64px'}}>
