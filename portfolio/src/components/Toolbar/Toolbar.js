@@ -1,14 +1,20 @@
 import React from 'react';
 
+import './ToolbarStyle.css';
+import SidebarToggle from '../SideBar/SideBarToggle';
+
 const toolbar = props => (
-    <header>
-        <nav>
-            <div></div>
-            <div><a href="/">LOGO</a></div>
+    <header className="toolbar">
+        <nav className="toolbar_navigation">
             <div>
+                <SidebarToggle />
+            </div>
+            <div className="toolbar_logo"><a href="/">LOGO</a></div>
+            <div className="spacer" />
+            <div className="toolbar_nav_items">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Page2</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Projects</a></li>
                 </ul>
             </div>
         </nav>
