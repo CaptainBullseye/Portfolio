@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     background: #0f0f0f;
-    height: 56px;
+    height: 80px;
 }
 
 .toolbar_navigation {
@@ -19,13 +19,18 @@
 }
 
 .toolbar_logo {
-    margin-left: 1rem;
+    margin-left: 2rem;
 }
 
 .toolbar_logo a {
     color: white;
     text-decoration: none;
     font-size: 1.5rem;
+}
+
+.toolbar_logo img {
+    height: 50px;
+    width: 50px;
 }
 
 .toolbar_nav_items ul {
