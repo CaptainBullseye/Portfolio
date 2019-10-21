@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideBar from './components/SideBar/SideBar';
 import Backdrop from './components/Backdrop/Backdrop';
+// import CarouselUI from './components/Image-Slider/Slider';
+import carousel from './components/Carousel/carousel';
 
 class App extends Component {
     state = {
@@ -30,7 +32,12 @@ class App extends Component {
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}
                 
+                {/* <CarouselUI /> */}
+
                 <main style={{marginTop: '88px'}}>
+                    
+                <Carousel slides={carouselSlidesData} />, carouselContainer
+                
                 <p>This is the page content</p>
                 </main>
             </div>
