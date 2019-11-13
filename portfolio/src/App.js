@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar';
 import SideBar from './components/SideBar/SideBar';
 import Backdrop from './components/Backdrop/Backdrop';
@@ -7,7 +7,31 @@ import 'react-animated-slider/build/horizontal.css';
 import ContentSlider from './components/SlideContent/SlideContent';
 
 // import ProgessBar from './components/ProgressBar/ProgressBar';
-import ProgBar from './components/Prog/Prog';
+// import ProgBar from './components/Prog/Prog';
+import VerticalProgBar from './components/VerticalProgBar/VerticalProgbar';
+// import Stuff from './components/Icons/Stuff';
+// import { ICONS } from './components/Icons/Icons';
+
+
+// var counting = false;
+
+// function start(percentage) {
+//     //console.log(counting);
+//     if (!counting) {
+//         counting = true;
+//         // log.innerHTML = count;
+//         var timer = setInterval(function() {
+//             if (percentage < 100) {
+//                 // log.innerHTML = count;
+//                 percentage++;
+//             } else {
+//                 clearInterval(timer);
+//                 percentage = arguments[0];
+//                 counting = false;
+//             }
+//         }, 100);
+//     }
+// }
 
 class App extends Component {
     state = {
@@ -43,24 +67,9 @@ class App extends Component {
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}
                 
-                {/* <main style={{marginTop: '88px'}}>   */}
-                
-                {/* <p>This is the page content</p> */}
-                
                 <ContentSlider />
-                {/* <ProgessBar /> */}
-                <Fragment>
-                    <div style={{height:'300px', width: '100%', paddingTop: '100px'}}>
-                        <button onClick={() => this.setState({ percentage: this.state.percentage + 10 })} >Increase</button>
-                        {/* moet uiteindelijk de 'start' knop worden */}
-                        <button onClick={() => this.setState({ percentage: this.state.percentage - 10 })} >Decrease</button>
-                        {/* moet uiteindelijk de 'reset' knop worden */}
-                        <ProgBar percentage={this.state.percentage} />
-                    </div>
-                </Fragment>
-                
 
-                {/* </main> */}
+                <VerticalProgBar />          
 
             </div>
             
