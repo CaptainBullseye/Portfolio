@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import './adjust.css'
 // import {ICONS} from '../Icons/Icons';
 // import Stuff from '../Icons/Stuff'
 
@@ -9,104 +10,107 @@ class VerticalProgBar extends React.Component {
     render() {
         return(
         <VerticalTimeline>
-
+        
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-                date="2011 - present"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                VerticalTimeline={{color: '#222'}}
+                // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
+                date="2011 - 2017"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 // icon={<Stuff ding= {ICONS.SCHOOL} />}
             >
-                <h3 className="vertical-timeline-element-title">Creative Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
+                <h3 className="vertical-timeline-element-title">Havo</h3>
+                <h4 className="vertical-timeline-element-subtitle">Dr-Knippenbergcollege</h4>
                 <p>
-                Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+                Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2010 - 2011"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="2017 - heden"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 // icon={<path d={ICONS.SCHOOL} />}
             >
-                <h3 className="vertical-timeline-element-title">Art Director</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                <h3 className="vertical-timeline-element-title">HBO ICT & Media design</h3>
+                <h4 className="vertical-timeline-element-subtitle">Fontys hogescholen</h4>
                 <p>
-                Creative Direction, User Experience, Visual Design, SEO, Online Marketing
+                Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2008 - 2010"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="Maand 2017"
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 // icon={<WorkIcon />}
             >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">Los Angeles, CA</h4>
+                <h3 className="vertical-timeline-element-title">Cardiff Certificaat</h3>
+                <h4 className="vertical-timeline-element-subtitle">Cardiff/Fontys hogescholen</h4>
                 <p>
-                User Experience, Visual Design
+                Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2006 - 2008"
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="Maand 2018 - Maand 2018"
+                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 // icon={<WorkIcon />}
             >
-                <h3 className="vertical-timeline-element-title">Web Designer</h3>
-                <h4 className="vertical-timeline-element-subtitle">San Francisco, CA</h4>
+                <h3 className="vertical-timeline-element-title">Tim Koehoorn</h3>
+                <h4 className="vertical-timeline-element-subtitle">Fontys hogescholen</h4>
                 <p>
-                User Experience, Visual Design
+                Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                date="April 2013"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="Maand 2019 - Maand 2019"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 // icon={<SchoolIcon />}
             >
-                <h3 className="vertical-timeline-element-title">Content Marketing for Web, Mobile and Social Media</h3>
-                <h4 className="vertical-timeline-element-subtitle">Online Course</h4>
+                <h3 className="vertical-timeline-element-title">Night Of The Nerds</h3>
+                <h4 className="vertical-timeline-element-subtitle">Fontys hogescholen</h4>
                 <p>
-                Strategy, Social Media
+                Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
                 className="vertical-timeline-element--education"
-                date="November 2012"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="Maand 2019 - Maand 2020"
                 iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
                 // icon={<SchoolIcon />}
             >
-                <h3 className="vertical-timeline-element-title">Agile Development Scrum Master</h3>
-                <h4 className="vertical-timeline-element-subtitle">Certification</h4>
-                <p>
-                Creative Direction, User Experience, Visual Design
-                </p>
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="2002 - 2006"
-                iconStyle={{ background: 'rgb(233, 30, 99)', color: '#fff' }}
-                // icon={<SchoolIcon />}
-            >
-                <h3 className="vertical-timeline-element-title">Bachelor of Science in Interactive Digital Media Visual Imaging</h3>
-                <h4 className="vertical-timeline-element-subtitle">Bachelor Degree</h4>
+                <h3 className="vertical-timeline-element-title">Picoo</h3>
+                <h4 className="vertical-timeline-element-subtitle">Fontys hogescholen</h4>
                 <p>
                 Creative Direction, Visual Design
                 </p>
             </VerticalTimelineElement>
             
             <VerticalTimelineElement
-                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-                // icon={<StarIcon />}
-            />
+                className="vertical-timeline-element--education"
+                contentStyle={{ background: '#FFD800', color: '#222222' }}
+                date="Maand 2020 - Maand 2020"
+                iconStyle={{ background: '#9C27B0', color: '#fff' }}
+                // icon={<SchoolIcon />}
+            >
+                <h3 className="vertical-timeline-element-title">Stage</h3>
+                <h4 className="vertical-timeline-element-subtitle">Stage bedrijf</h4>
+                <p>
+                Creative Direction, Visual Design
+                </p>
+            </VerticalTimelineElement>
+
     </VerticalTimeline>
         )
     }
