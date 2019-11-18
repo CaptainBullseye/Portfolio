@@ -5,29 +5,53 @@ import './adjust.css'
 // import {ICONS} from '../Icons/Icons';
 // import Stuff from '../Icons/Stuff'
 
+const info = [
+    {
+        onderwerp: 'Havo',
+        locatie: 'Dr-Knippenbergcollege',
+        informatie: 'Coole student',
+        datum: '2011 - 2017'
+    },
+    {
+        onderwerp: 'HBO ICT & Media design',
+        locatie: 'Fontys hogescholen',
+        informatie: 'ya boi'
+    },
+    {
+        onderwerp: 'Cardiff Certificaat',
+        locatie: 'Cardiff/Fontys hogescholen',
+        informatie: 'yeet'
+    }
+];
+
 
 class VerticalProgBar extends React.Component {
     render() {
         return(
         <VerticalTimeline>
         
+        {info.map((item, index) => (
+
             <VerticalTimelineElement
+                key={index}
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFD800', color: '#222222' }}
                 VerticalTimeline={{color: '#222'}}
                 // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
-                date="2011 - 2017"
+                date={item.datum}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 // icon={<Stuff ding= {ICONS.SCHOOL} />}
             >
-                <h3 className="vertical-timeline-element-title">Havo</h3>
-                <h4 className="vertical-timeline-element-subtitle">Dr-Knippenbergcollege</h4>
-                <p>
-                Creative Direction, Visual Design
-                </p>
+
+                    <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
+                    <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
+                    <p>{item.informatie}</p>
+                
             </VerticalTimelineElement>
 
-            <VerticalTimelineElement
+            ))}
+
+            {/* <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 contentStyle={{ background: '#FFD800', color: '#222222' }}
                 date="2017 - heden"
@@ -36,9 +60,7 @@ class VerticalProgBar extends React.Component {
             >
                 <h3 className="vertical-timeline-element-title">HBO ICT & Media design</h3>
                 <h4 className="vertical-timeline-element-subtitle">Fontys hogescholen</h4>
-                <p>
-                Creative Direction, Visual Design
-                </p>
+                <p>safsdfsd</p>
             </VerticalTimelineElement>
 
             <VerticalTimelineElement
@@ -109,7 +131,7 @@ class VerticalProgBar extends React.Component {
                 <p>
                 Creative Direction, Visual Design
                 </p>
-            </VerticalTimelineElement>
+            </VerticalTimelineElement> */}
 
     </VerticalTimeline>
         )

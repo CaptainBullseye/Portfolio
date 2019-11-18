@@ -47,7 +47,7 @@ const ContentSlider = () => (
 				<div
 					key={index}
 					className="slider-content"
-					style={{ background: `url('${item.image}') no-repeat center center` }}
+					style={{ background: `url('${item.image}') no-repeat center center`, height: '100%' }}
 				>
 					<div className="inner">
 						<h1>{item.title}</h1>
