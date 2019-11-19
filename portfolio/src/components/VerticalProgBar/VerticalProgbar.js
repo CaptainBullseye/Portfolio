@@ -5,23 +5,69 @@ import './adjust.css'
 // import {ICONS} from '../Icons/Icons';
 // import Stuff from '../Icons/Stuff'
 
+var school = '#2196f3';
+var projecten = '#e91e63';
+var werk = '#9C27B0';
+
 const info = [
+    // template
+    // {
+    //     onderwerp: '',
+    //     locatie: '',
+    //     informatie: '',
+    //     datum: '',
+    //     categorie: 
+    // },
     {
         onderwerp: 'Havo',
         locatie: 'Dr-Knippenbergcollege',
         informatie: 'Coole student',
-        datum: '2011 - 2017'
+        datum: '2011 - 2017',
+        categorie: school
     },
     {
         onderwerp: 'HBO ICT & Media design',
         locatie: 'Fontys hogescholen',
-        informatie: 'ya boi'
+        informatie: 'Mijn opleiding',
+        datum: 'Maand 2017 - Nu',
+        categorie: school
     },
     {
         onderwerp: 'Cardiff Certificaat',
         locatie: 'Cardiff/Fontys hogescholen',
-        informatie: 'yeet'
+        informatie: 'Uitwisselings programma naar Cardiff, Wales',
+        datum: 'Maand 2017',
+        categorie: school
+    },
+    {
+        onderwerp: 'Tim Koehoorn',
+        locatie: 'Fontys hogescholen',
+        informatie: 'Branding gemaakt voor Tim Koehoorn',
+        datum: 'Maand 2018 - Maand 2018',
+        categorie: projecten
+    },
+    {
+        onderwerp: 'Night of the Nerds',
+        locatie: 'Fontys hogescholen',
+        informatie: "Project voor het tentoonstellen van video's van Veejays.com en de animatie opleiding van het Sint Lucas Eindhoven op een interactieve manier",
+        datum: 'Maand 2018 - Maand 2019',
+        categorie: projecten
+    },
+    {
+        onderwerp: 'Picoo',
+        locatie: 'Fontys hogescholen',
+        informatie: 'Een uitgebreide brandguide maken voor het bedrijf Picoo',
+        datum: 'Maand 2019 - Maand 2020',
+        categorie: projecten
+    },
+    {
+        onderwerp: 'Stage',
+        locatie: 'Stage bedrijf',
+        informatie: 'Stage opdracht',
+        datum: 'Maand 2020 - Maand 2020',
+        categorie: werk
     }
+    
 ];
 
 
@@ -39,7 +85,7 @@ class VerticalProgBar extends React.Component {
                 VerticalTimeline={{color: '#222'}}
                 // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
                 date={item.datum}
-                iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                iconStyle={{ background: item.categorie, color: '#fff' }}
                 // icon={<Stuff ding= {ICONS.SCHOOL} />}
             >
 

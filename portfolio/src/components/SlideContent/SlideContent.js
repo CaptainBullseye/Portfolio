@@ -11,13 +11,13 @@ const content = [
        userProfile: 120 x 120 
     */
 	{
-		title: 'Vulputate Mollis Ultricies Fermentum Parturient',
+		title: 'Night of the Nerds',
 		description:
-		'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
+		'Mijn groep en ik stonden op Night of the Nerds met ons project KYK',
 		button: 'Read More',
-		image: 'https://i.imgur.com/ZXBtVw7.jpg',
-		user: 'Luan Gjokaj',
-		userProfile: 'https://i.imgur.com/JSW6mEk.png'
+		image: 'https://www.vdlgroep.com/_cache/_public/NOTN-2017_YXJfMTI2MHg4NDBfZF8xX2pwZ18vX2Fzc2V0L19wcml2YXRlL25ld3MvMjQ_ff16f5ce.jpg',
+		user: '',
+		userProfile: ''
 	},
 	{
 		title: 'Tortor Dapibus Commodo Aenean Quam',
@@ -25,8 +25,8 @@ const content = [
 		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
 		button: 'Discover',
 		image: 'https://i.imgur.com/DCdBXcq.jpg',
-		user: 'Erich Behrens',
-		userProfile: 'https://i.imgur.com/0Clfnu7.png'
+		user: '',
+		userProfile: ''
 	},
 	{
 		title: 'Phasellus volutpat metus',
@@ -34,8 +34,8 @@ const content = [
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
 		button: 'Buy now',
 		image: 'https://i.imgur.com/DvmN8Hx.jpg',
-		user: 'Bruno Vizovskyy',
-		userProfile: 'https://i.imgur.com/4KeKvtH.png' 
+		user: '',
+		userProfile: '' 
 	}
 ];
 
@@ -51,15 +51,15 @@ const ContentSlider = () => (
 				>
 					<div className="inner">
 						<h1>{item.title}</h1>
-						<p>{item.description}</p>
+						<p style={{fontSize: 16}}>{item.description}</p>
 						<button>{item.button}</button>
 					</div>
-					<section>
+					{/* <section>
 						<img src={item.userProfile} alt={item.user} />
 						<span>
 							Posted by <strong>{item.user}</strong>
 						</span>
-					</section>
+					</section> */}
 				</div>
 			))}
 		</Slider>
