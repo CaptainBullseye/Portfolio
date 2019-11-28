@@ -2,10 +2,17 @@
     background:#FFD800;
 }
 
-.vertical-timeline-element-date {
+.vertical-timeline-element-icon {
+    box-shadow: 0 0 0 4px #FFD800, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+    opacity: 1;
     color: #ffffff;
 }
 
-.vertical-timeline-element-icon {
-    box-shadow: 0 0 0 4px #FFD800, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+@media only screen and (max-width: 600px) { 
+    .vertical-timeline-element-content .vertical-timeline-element-date {
+        color: #222222;
+    }
 }

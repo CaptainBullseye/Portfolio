@@ -5,6 +5,7 @@ import Backdrop from './components/Backdrop/Backdrop';
 
 import 'react-animated-slider/build/horizontal.css';
 import ContentSlider from './components/SlideContent/SlideContent';
+import About from './components/About/About';
 
 // import ProgessBar from './components/ProgressBar/ProgressBar';
 // import ProgBar from './components/Prog/Prog';
@@ -68,6 +69,8 @@ class App extends Component {
                 {backdrop}
                 
                 <ContentSlider />
+
+                <About />
 
                 <VerticalProgBar />          
 
