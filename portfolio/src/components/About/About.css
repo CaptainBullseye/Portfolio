@@ -3,7 +3,7 @@
     border: 1px solid purple;
 }
 
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 1170px) {
     .about-wrapper {
         margin-left: 300px;
         border: 1px solid purple;
@@ -22,7 +22,7 @@
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1169px) {
     .about-foto {
         height: 200px;
         width: 200px;
@@ -31,6 +31,7 @@
     .about-wrapper {
         /* height: 200px; */
         margin-left: 10px;
+        min-height: 200px;
     }
 }
 

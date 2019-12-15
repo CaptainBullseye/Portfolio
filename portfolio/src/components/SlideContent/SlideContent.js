@@ -13,7 +13,7 @@ const content = [
 	{
 		title: 'Night of the Nerds',
 		description:
-		'Mijn groep en ik stonden op Night of the Nerds met ons project KYK',
+		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds.',
 		button: 'Read More',
 		image: 'https://www.vdlgroep.com/_cache/_public/NOTN-2017_YXJfMTI2MHg4NDBfZF8xX2pwZ18vX2Fzc2V0L19wcml2YXRlL25ld3MvMjQ_ff16f5ce.jpg',
 		user: '',
@@ -51,7 +51,7 @@ const ContentSlider = () => (
 				>
 					<div className="inner">
 						<h1>{item.title}</h1>
-						<p style={{fontSize: 16}}>{item.description}</p>
+						<p style={{fontSize: 16}}><strong>{item.description}</strong></p>
 						<button>{item.button}</button>
 					</div>
 					{/* <section>

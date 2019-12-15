@@ -5,11 +5,11 @@ import './adjust.css'
 // import {ICONS} from '../Icons/Icons';
 // import Stuff from '../Icons/Stuff'
 
-var school = '#2196f3';
-var projecten = '#e91e63';
-var werk = '#9C27B0';
+const school = '#2196f3';
+const projecten = '#e91e63';
+const werk = '#9C27B0';
 
-const info = [
+let info = [
     // template
     // {
     //     onderwerp: '',
@@ -70,13 +70,24 @@ const info = [
     
 ];
 
+var subject = info.filter(function(selected) {
+    return selected.categorie;
+    
+})
+
+// let test = projecten;
+
+// var subject = info.filter(function(selected) {
+//     return selected.categorie === test;
+    
+// })
 
 class VerticalProgBar extends React.Component {
     render() {
         return(
         <VerticalTimeline>
-        
-        {info.map((item, index) => (
+
+        {subject.map((item, index) => (
 
             <VerticalTimelineElement
                 key={index}
