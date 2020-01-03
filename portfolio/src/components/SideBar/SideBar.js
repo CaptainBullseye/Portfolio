@@ -9,7 +9,7 @@ const sideBar = props => {
     return (<nav className={sideBarClasses}>
         <ul>
             <li>
-                <a href="/">About</a>
+                <a href="src/NightOfTheNerds.js">Night Of The Nerds</a>
             </li>
             <li>
                 <a href="/">Projects</a>

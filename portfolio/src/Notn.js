@@ -7,9 +7,16 @@ import ContentSlider from './components/SlideContent/SlideContent';
 import About from './components/About/About';
 import VerticalProgBar from './components/VerticalProgBar/VerticalProgbar';
 
-class App extends Component {
+class Notn extends Component {
     state = {
         sideBarOpen: false
+    }
+
+    constructor(){
+        super();
+        this.state = {
+            percentage: 0
+        }
     }
 
     sideBarToggleClickHandler = () => {
@@ -29,7 +36,7 @@ class App extends Component {
             backdrop = <Backdrop click={this.backdropClickHandler}/>
         }
         return(
-            <div style={{height: '100%', width: '100%'}}>
+            <div id="notn" style={{height: '100%', width: '100%'}}>
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}
@@ -40,11 +47,9 @@ class App extends Component {
 
                 <VerticalProgBar />          
 
-            </div>
+            </div> 
         )
-    };
-
-    
+    };    
 }
 
-export default App;
+export default Notn;

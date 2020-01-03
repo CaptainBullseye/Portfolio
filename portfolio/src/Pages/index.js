@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Toolbar from './components/Toolbar/Toolbar';
-import SideBar from './components/SideBar/SideBar';
-import Backdrop from './components/Backdrop/Backdrop';
+import Toolbar from '../components/Toolbar/Toolbar';
+import SideBar from '../components/SideBar/SideBar';
+import Backdrop from '../components/Backdrop/Backdrop';
 import 'react-animated-slider/build/horizontal.css';
-import ContentSlider from './components/SlideContent/SlideContent';
-import About from './components/About/About';
-import VerticalProgBar from './components/VerticalProgBar/VerticalProgbar';
+import ContentSlider from '../components/SlideContent/SlideContent';
+import About from '../components/About/About';
+import VerticalProgBar from '../components/VerticalProgBar/VerticalProgbar';
 
-class App extends Component {
+class MainPage extends Component {
     state = {
         sideBarOpen: false
     }
@@ -47,4 +47,4 @@ class App extends Component {
     
 }
 
-export default App;
+export default MainPage;

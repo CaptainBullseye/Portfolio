@@ -1,10 +1,13 @@
 import React from 'react';
 import './About.css';
 import Dennis from "../images/dennis.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
+AOS.init();
 
 const About = () => (
-    <section className="about-wrapper">
+    <section data-aos="zoom-in" className="about-wrapper">
 
             <img className="about-foto" src={Dennis} alt="logo" />
             <h1 className="about-header">Wie ben ik?</h1>
@@ -14,8 +17,7 @@ const About = () => (
                 Uiteraard vind ik het ook harstikke leuk om bezig te zijn met front-end development want ik ben natuurlijk niet voor niets een ICT student.</p>
 
                 </div>
-        
-         
+
     </section>
 );
 

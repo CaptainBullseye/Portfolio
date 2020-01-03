@@ -21,7 +21,7 @@
     max-width: 1170px;
     margin: 0px auto;
     position: relative;
-    animation: zoomIn .6s;
+    /* animation: zoomIn .6s; */
 }
 
 .filter-button {
@@ -33,7 +33,7 @@
 }
 
 /* zoomIn animatie */
-@-webkit-keyframes zoomIn {
+/* @-webkit-keyframes zoomIn {
     from {
       opacity: 0;
       -webkit-transform: scale3d(0.3, 0.3, 0.3);
@@ -60,4 +60,4 @@
   .zoomIn {
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;
-  }
+  } */
