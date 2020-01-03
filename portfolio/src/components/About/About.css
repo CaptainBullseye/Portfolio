@@ -1,12 +1,12 @@
 .about-wrapper {
     margin-left: 300px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 @media only screen and (min-width: 1170px) {
     .about-wrapper {
         margin-left: 300px;
-        border: 1px solid purple;
+        /* border: 1px solid purple; */
         min-height: 350px;
     }
 }
@@ -18,7 +18,7 @@
     margin-left: auto;
     margin-right: auto;
     float: left;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
@@ -37,13 +37,13 @@
 
 .about-tekst {
     color: white;
-    border: 1px solid #06e3f5;
+    /* border: 1px solid #06e3f5; */
     max-width: 1200px;
 }
 
 .about-header {
     color: white;
-    border: 1px solid #73ff00;
+    /* border: 1px solid #73ff00; */
     display: flex;
     margin-bottom: 2px;
 }

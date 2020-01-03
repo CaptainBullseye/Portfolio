@@ -1,5 +1,5 @@
 import React from 'react';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './adjust.css'
 // import {ICONS} from '../Icons/Icons';
@@ -9,7 +9,7 @@ const school = '#2196f3';
 const projecten = '#e91e63';
 const werk = '#9C27B0';
 
-let info = [
+const info = [
     // template
     // {
     //     onderwerp: '',
@@ -21,7 +21,7 @@ let info = [
     {
         onderwerp: 'Havo',
         locatie: 'Dr-Knippenbergcollege',
-        informatie: 'Coole student',
+        informatie: 'Student',
         datum: '2011 - 2017',
         categorie: school
     },
@@ -67,48 +67,88 @@ let info = [
         datum: 'Maand 2020 - Maand 2020',
         categorie: werk
     }
-    
+
 ];
 
-var subject = info.filter(function(selected) {
-    return selected.categorie;
-    
-})
-
-// let test = projecten;
-
 // var subject = info.filter(function(selected) {
-//     return selected.categorie === test;
-    
+//     return selected.categorie;
+
 // })
+
 
 class VerticalProgBar extends React.Component {
     render() {
-        return(
-        <VerticalTimeline>
 
-        {subject.map((item, index) => (
+        let subject = info.filter(function (selected) {
+            return selected.categorie;
+        });
 
-            <VerticalTimelineElement
-                key={index}
-                className="vertical-timeline-element--work"
-                contentStyle={{ background: '#FFD800', color: '#222222' }}
-                VerticalTimeline={{color: '#222'}}
-                // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
-                date={item.datum}
-                iconStyle={{ background: item.categorie, color: '#fff' }}
-                // icon={<Stuff ding= {ICONS.SCHOOL} />}
-            >
+        function change1() {
+            subject = info.filter(function (selected) {
+                return selected.categorie === school;
+            });
+            console.log(subject)
+        }
 
-                    <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
-                    <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
-                    <p>{item.informatie}</p>
-                
-            </VerticalTimelineElement>
+        function change2() {
+            subject = info.filter(function (selected) {
+                return selected.categorie === projecten;
+            });
+            console.log(subject)
+        }
 
-        ))}
+        function change3() {
+            subject = info.filter(function (selected) {
+                return selected.categorie === werk;
+            });
+            console.log(subject)
+        }
 
-    </VerticalTimeline>
+        function resetFilter() {
+            subject = info.filter(function (selected) {
+                return selected.categorie === werk;
+            });
+            console.log(subject)
+        }
+
+        // functies met buttons werken maar de map word niet ge-update
+
+        return (
+
+            <React.Fragment>
+                <div className="filter-buttons-container">
+                    <button className="filter-button" type='button' onClick={() => change1()} >School</button>
+                    <button className="filter-button" type='button' onClick={() => change2()} >Projecten</button>
+                    <button className="filter-button" type='button' onClick={() => change3()} >Werk</button>
+                    <button className="filter-button" type='button' onClick={() => resetFilter()} >Alles</button>
+                </div>
+
+                <VerticalTimeline>
+
+                    {subject.map((item, index) => (
+
+                        <VerticalTimelineElement
+                            key={index}
+                            className="vertical-timeline-element--work"
+                            contentStyle={{ background: '#FFD800', color: '#222222' }}
+                            VerticalTimeline={{ color: '#222' }}
+                            // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
+                            date={item.datum}
+                            iconStyle={{ background: item.categorie, color: '#fff' }}
+                        // icon={<Stuff ding= {ICONS.SCHOOL} />}
+                        >
+
+                            <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
+                            <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
+                            <p>{item.informatie}</p>
+
+                        </VerticalTimelineElement>
+
+                    ))}
+
+                </VerticalTimeline>
+
+            </React.Fragment>
         )
     }
 }
