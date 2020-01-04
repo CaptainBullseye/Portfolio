@@ -43,8 +43,6 @@ class MainPage extends Component {
             </div>
         )
     };
-
-    
 }
 
 export default MainPage;

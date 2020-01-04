@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const About = () => (
-    <section data-aos="zoom-in" className="about-wrapper">
+    <section data-aos="zoom-in" className="about-wrapper" id="about">
 
             <img className="about-foto" src={Dennis} alt="logo" />
             <h1 className="about-header">Wie ben ik?</h1>

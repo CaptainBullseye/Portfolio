@@ -4,6 +4,8 @@ import 'react-vertical-timeline-component/style.min.css';
 import './adjust.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGraduationCap, faBriefcase, faArchive } from '@fortawesome/free-solid-svg-icons';
 
 AOS.init({
     // Global settings:
@@ -46,49 +48,56 @@ const info = [
         locatie: 'Dr-Knippenbergcollege',
         informatie: 'Student',
         datum: '2011 - 2017',
-        categorie: school
+        categorie: school,
+        iconn: faGraduationCap
     },
     {
         onderwerp: 'HBO ICT & Media design',
         locatie: 'Fontys hogescholen',
         informatie: 'Mijn opleiding',
         datum: 'Maand 2017 - Nu',
-        categorie: school
+        categorie: school,
+        iconn: faGraduationCap
     },
     {
         onderwerp: 'Cardiff Certificaat',
         locatie: 'Cardiff/Fontys hogescholen',
         informatie: 'Uitwisselings programma naar Cardiff, Wales',
         datum: 'Maand 2017',
-        categorie: school
+        categorie: school,
+        iconn: faGraduationCap
     },
     {
         onderwerp: 'Tim Koehoorn',
         locatie: 'Fontys hogescholen',
         informatie: 'Branding gemaakt voor Tim Koehoorn',
         datum: 'Maand 2018 - Maand 2018',
-        categorie: projecten
+        categorie: projecten,
+        iconn: faArchive
     },
     {
         onderwerp: 'Night of the Nerds',
         locatie: 'Fontys hogescholen',
         informatie: "Project voor het tentoonstellen van video's van Veejays.com en de animatie opleiding van het Sint Lucas Eindhoven op een interactieve manier",
         datum: 'Maand 2018 - Maand 2019',
-        categorie: projecten
+        categorie: projecten,
+        iconn: faArchive
     },
     {
         onderwerp: 'Picoo',
         locatie: 'Fontys hogescholen',
         informatie: 'Een uitgebreide brandguide maken voor het bedrijf Picoo',
         datum: 'Maand 2019 - Maand 2020',
-        categorie: projecten
+        categorie: projecten,
+        iconn: faArchive
     },
     {
         onderwerp: 'Stage',
         locatie: 'Stage bedrijf',
         informatie: 'Stage opdracht',
         datum: 'Maand 2020 - Maand 2020',
-        categorie: werk
+        categorie: werk,
+        iconn: faBriefcase
     }
 
 ];
@@ -110,6 +119,7 @@ class VerticalProgBar extends React.Component {
             subject = info.filter(function (selected) {
                 return selected.categorie === school;
             });
+            
             console.log(subject)
         }
 
@@ -129,7 +139,7 @@ class VerticalProgBar extends React.Component {
 
         function resetFilter() {
             subject = info.filter(function (selected) {
-                return selected.categorie === werk;
+                return selected.categorie;
             });
             console.log(subject)
         }
@@ -139,7 +149,7 @@ class VerticalProgBar extends React.Component {
         return (
 
             <React.Fragment>
-                <div className="filter-buttons-container" data-aos="zoom-in">
+                <div className="filter-buttons-container" data-aos="zoom-in" id="tijdlijn">
                     <button className="filter-button" type='button' onClick={() => change1()} >School</button>
                     <button className="filter-button" type='button' onClick={() => change2()} >Projecten</button>
                     <button className="filter-button" type='button' onClick={() => change3()} >Werk</button>
@@ -148,17 +158,18 @@ class VerticalProgBar extends React.Component {
 
                 <VerticalTimeline>
 
-                    {subject.map((item, index) => (
+                    {subject.map(item => (
 
                         <VerticalTimelineElement
-                            key={index}
+                            // key={index}
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: '#FFD800', color: '#222222' }}
                             VerticalTimeline={{ color: '#222' }}
                             // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
                             date={item.datum}
                             iconStyle={{ background: item.categorie, color: '#fff' }}
-                        // icon={<Stuff ding= {ICONS.SCHOOL} />}
+                            icon={<FontAwesomeIcon icon={item.iconn} />}
+                         // icon={<Stuff ding= {ICONS.SCHOOL} />}
                         >
 
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>

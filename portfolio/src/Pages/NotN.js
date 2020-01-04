@@ -9,13 +9,6 @@ class Notn extends Component {
         sideBarOpen: false
     }
 
-    constructor(){
-        super();
-        this.state = {
-            percentage: 0
-        }
-    }
-
     sideBarToggleClickHandler = () => {
         this.setState((prevState) => {
             return{sideBarOpen: !prevState.sideBarOpen};
@@ -27,13 +20,14 @@ class Notn extends Component {
     };
 
     render() {
+
         let backdrop;
 
         if(this.state.sideBarOpen) {
             backdrop = <Backdrop click={this.backdropClickHandler}/>
         }
         return(
-            <div id="notn" style={{height: '100%', width: '100%'}}>
+            <div style={{height: '100%', width: '100%'}}>
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}

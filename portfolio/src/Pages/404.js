@@ -3,7 +3,7 @@ import React from "react";
 const PageNotFound = () => {
     return(
         <div>
-            <h3>404 Page Not Found!</h3>
+            <h1 style={{color: "white", textAlign: "center"}}>404 Page Not Found!</h1>
         </div>
     )
 }

@@ -43,6 +43,7 @@
 
 .toolbar_nav_items li {
     padding: 0 0.5rem;
+    cursor: pointer;
 }
 
 .toolbar_nav_items a {

@@ -4,6 +4,7 @@ import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
 import './slider-animations.css';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 const content = [
     /* content cheatsheet:
@@ -15,6 +16,7 @@ const content = [
 		description:
 		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds.',
 		button: 'Read More',
+		page:'/NotN',
 		image: 'https://www.vdlgroep.com/_cache/_public/NOTN-2017_YXJfMTI2MHg4NDBfZF8xX2pwZ18vX2Fzc2V0L19wcml2YXRlL25ld3MvMjQ_ff16f5ce.jpg',
 		user: '',
 		userProfile: ''
@@ -24,6 +26,7 @@ const content = [
 		description:
 		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
 		button: 'Discover',
+		page:'',
 		image: 'https://i.imgur.com/DCdBXcq.jpg',
 		user: '',
 		userProfile: ''
@@ -33,6 +36,7 @@ const content = [
 		description:
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
 		button: 'Buy now',
+		page:'',
 		image: 'https://i.imgur.com/DvmN8Hx.jpg',
 		user: '',
 		userProfile: '' 
@@ -52,7 +56,7 @@ const ContentSlider = () => (
 					<div className="inner">
 						<h1>{item.title}</h1>
 						<p style={{fontSize: 16}}><strong>{item.description}</strong></p>
-						<button>{item.button}</button>
+						<Link to={item.page}><button>{item.button}</button></Link>
 					</div>
 					{/* <section>
 						<img src={item.userProfile} alt={item.user} />
