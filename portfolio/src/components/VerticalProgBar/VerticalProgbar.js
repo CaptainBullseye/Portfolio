@@ -30,9 +30,9 @@ AOS.init({
   
   });
 
-const school = '#2196f3';
-const projecten = '#e91e63';
-const werk = '#9C27B0';
+const kleurSchool = '#2196f3';
+const kleurProjecten = '#e91e63';
+const kleurWerk = '#9C27B0';
 
 const info = [
     // template
@@ -48,7 +48,8 @@ const info = [
         locatie: 'Dr-Knippenbergcollege',
         informatie: 'Student',
         datum: '2011 - 2017',
-        categorie: school,
+        categorie: 'school',
+        kleur: kleurSchool,
         iconn: faGraduationCap
     },
     {
@@ -56,7 +57,8 @@ const info = [
         locatie: 'Fontys hogescholen',
         informatie: 'Mijn opleiding',
         datum: 'Maand 2017 - Nu',
-        categorie: school,
+        categorie: 'school',
+        kleur: kleurSchool,
         iconn: faGraduationCap
     },
     {
@@ -64,7 +66,8 @@ const info = [
         locatie: 'Cardiff/Fontys hogescholen',
         informatie: 'Uitwisselings programma naar Cardiff, Wales',
         datum: 'Maand 2017',
-        categorie: school,
+        categorie: 'school',
+        kleur: kleurSchool,
         iconn: faGraduationCap
     },
     {
@@ -72,7 +75,8 @@ const info = [
         locatie: 'Fontys hogescholen',
         informatie: 'Branding gemaakt voor Tim Koehoorn',
         datum: 'Maand 2018 - Maand 2018',
-        categorie: projecten,
+        categorie: 'projecten',
+        kleur: kleurProjecten,
         iconn: faArchive
     },
     {
@@ -80,7 +84,8 @@ const info = [
         locatie: 'Fontys hogescholen',
         informatie: "Project voor het tentoonstellen van video's van Veejays.com en de animatie opleiding van het Sint Lucas Eindhoven op een interactieve manier",
         datum: 'Maand 2018 - Maand 2019',
-        categorie: projecten,
+        categorie: 'projecten',
+        kleur: kleurProjecten,
         iconn: faArchive
     },
     {
@@ -88,7 +93,8 @@ const info = [
         locatie: 'Fontys hogescholen',
         informatie: 'Een uitgebreide brandguide maken voor het bedrijf Picoo',
         datum: 'Maand 2019 - Maand 2020',
-        categorie: projecten,
+        categorie: 'projecten',
+        kleur: kleurProjecten,
         iconn: faArchive
     },
     {
@@ -96,80 +102,69 @@ const info = [
         locatie: 'Stage bedrijf',
         informatie: 'Stage opdracht',
         datum: 'Maand 2020 - Maand 2020',
-        categorie: werk,
+        categorie: 'werk',
+        kleur: kleurWerk,
         iconn: faBriefcase
     }
 
 ];
 
+
 // var subject = info.filter(function(selected) {
 //     return selected.categorie;
-
+        
 // })
 
 
 class VerticalProgBar extends React.Component {
-    render() {
+    constructor(props) {
+        super(props);
+        this.state = {
+            currentFilter: "",
+            filterdData: info
+        }
+    }
 
-        let subject = info.filter(function (selected) {
-            return selected.categorie;
+    change(category) {
+        console.log(category)
+        let filterdData = info.filter(function (selected) {
+            return selected.categorie === category;
+        });
+        this.setState({
+            state: {
+                currentFilter: category,
+                filterdData: filterdData
+            }
         });
 
-        function change1() {
-            subject = info.filter(function (selected) {
-                return selected.categorie === school;
-            });
-            
-            console.log(subject)
-        }
+    }
 
-        function change2() {
-            subject = info.filter(function (selected) {
-                return selected.categorie === projecten;
-            });
-            console.log(subject)
-        }
-
-        function change3() {
-            subject = info.filter(function (selected) {
-                return selected.categorie === werk;
-            });
-            console.log(subject)
-        }
-
-        function resetFilter() {
-            subject = info.filter(function (selected) {
-                return selected.categorie;
-            });
-            console.log(subject)
-        }
+    render() {
 
         // functies met buttons werken maar de map word niet ge-update
-
+        console.log("test")
         return (
-
+            // Hier gaat het mis
             <React.Fragment>
                 <div className="filter-buttons-container" data-aos="zoom-in" id="tijdlijn">
-                    <button className="filter-button" type='button' onClick={() => change1()} >School</button>
-                    <button className="filter-button" type='button' onClick={() => change2()} >Projecten</button>
-                    <button className="filter-button" type='button' onClick={() => change3()} >Werk</button>
-                    <button className="filter-button" type='button' onClick={() => resetFilter()} >Alles</button>
+                    <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button> 
+                    <button className="filter-button" type='button' onClick={() => this.change('projecten')} >Projecten</button>
+                    <button className="filter-button" type='button' onClick={() => this.change('werk')} >Werk</button>
+                    <button className="filter-button" type='button' onClick={() => this.change('')} >Alles</button>
                 </div>
 
                 <VerticalTimeline>
 
-                    {subject.map(item => (
-
+                    {this.state.filterdData.map((item, index) => (
                         <VerticalTimelineElement
-                            // key={index}
+                            key={index}
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: '#FFD800', color: '#222222' }}
                             VerticalTimeline={{ color: '#222' }}
                             // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
                             date={item.datum}
-                            iconStyle={{ background: item.categorie, color: '#fff' }}
+                            iconStyle={{ background: item.kleur, color: '#fff' }}
                             icon={<FontAwesomeIcon icon={item.iconn} />}
-                         // icon={<Stuff ding= {ICONS.SCHOOL} />}
                         >
 
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
@@ -183,8 +178,10 @@ class VerticalProgBar extends React.Component {
                 </VerticalTimeline>
 
             </React.Fragment>
+            
         )
-    }
-}
-
+        }
+      
+    
+}   
 export default VerticalProgBar;

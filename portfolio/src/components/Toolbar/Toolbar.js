@@ -4,7 +4,7 @@ import './ToolbarStyle.css';
 import SidebarToggle from '../SideBar/SideBarToggle';
 import Logo from "../images/logo.png";
 import { Link } from 'react-router-dom';
-import Scrollspy from 'react-scrollspy'
+// import Scrollspy from 'react-scrollspy'
 
 const tester = [
     {
