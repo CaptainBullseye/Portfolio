@@ -17,8 +17,8 @@ AOS.init({
     disableMutationObserver: false, // disables automatic mutations' detections (advanced)
     debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
     throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
-    
-  
+
+
     // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
     offset: 120, // offset (in px) from the original trigger point
     delay: 0, // values from 0 to 3000, with step 50ms
@@ -27,8 +27,8 @@ AOS.init({
     once: true, // whether animation should happen only once - while scrolling down
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-  
-  });
+
+});
 
 const kleurSchool = '#2196f3';
 const kleurProjecten = '#e91e63';
@@ -106,56 +106,64 @@ const info = [
         kleur: kleurWerk,
         iconn: faBriefcase
     }
-
 ];
 
 
 // var subject = info.filter(function(selected) {
 //     return selected.categorie;
-        
+
 // })
 
 
 class VerticalProgBar extends React.Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
-            currentFilter: "",
-            filterdData: info
+            currentFilter: '',
+            filteredData: info
         }
     }
-
     change(category) {
-        console.log(category)
-        let filterdData = info.filter(function (selected) {
+        // console.log(currentFilter + " log currentFilter 1")
+        
+        let filteredData = info.filter(function (selected) {
             return selected.categorie === category;
         });
+        console.log(filteredData)
+        // console.log(currentFilter + " log currentFilter 2")
+        // om een of andere reden neemt de setState category niet over
         this.setState({
             state: {
                 currentFilter: category,
-                filterdData: filterdData
+                filteredData: filteredData
             }
         });
-
+        // console.log(currentFilter)
+        console.log(this.state)
+        console.log("this.state.filteredData hieronder")
+        console.log(this.state.filteredData)
     }
 
     render() {
 
         // functies met buttons werken maar de map word niet ge-update
-        console.log("test")
+        // console.log(currentFilter)
         return (
             // Hier gaat het mis
             <React.Fragment>
-                <div className="filter-buttons-container" data-aos="zoom-in" id="tijdlijn">
-                    <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button> 
+
+                {/* {console.log(filteredData)} filteredData' is not defined */}
+
+                <div className="filter-buttons-container" data-aos="zoom-in" >
+                    <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button>
                     <button className="filter-button" type='button' onClick={() => this.change('projecten')} >Projecten</button>
                     <button className="filter-button" type='button' onClick={() => this.change('werk')} >Werk</button>
                     <button className="filter-button" type='button' onClick={() => this.change('')} >Alles</button>
                 </div>
-
+                <div id="tijdlijn" />
                 <VerticalTimeline>
 
-                    {this.state.filterdData.map((item, index) => (
+                    {this.state.filteredData.map((item, index) => (
                         <VerticalTimelineElement
                             key={index}
                             className="vertical-timeline-element--work"
@@ -166,7 +174,13 @@ class VerticalProgBar extends React.Component {
                             iconStyle={{ background: item.kleur, color: '#fff' }}
                             icon={<FontAwesomeIcon icon={item.iconn} />}
                         >
+                            {/* {console.log(this.state.filteredData)} */}
 
+                            {/* this.state.filteredData geeft de volledige
+                                lijst weer (alle 7 blokken). de functie word genegeerd. */}
+                            
+                            {/* {console.log("ronde")} */}
+                            
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
                             <p>{item.informatie}</p>
@@ -174,14 +188,11 @@ class VerticalProgBar extends React.Component {
                         </VerticalTimelineElement>
 
                     ))}
-
                 </VerticalTimeline>
 
             </React.Fragment>
-            
+
         )
-        }
-      
-    
-}   
+    } 
+}
 export default VerticalProgBar;

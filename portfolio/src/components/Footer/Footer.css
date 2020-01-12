@@ -1,0 +1,64 @@
+.footer-container {
+    width: 100%;
+    height: 14em;
+    display: block;
+    box-sizing: border-box;
+    background-color: #0f0f0f;
+}
+
+.footer-container > div:first-child {
+    float: left;
+    text-align: left;
+    width: 33.3%;
+}
+
+.footer-container > div:nth-child(2) {
+    float: left;
+    text-align: left;
+    width: 33.4%;
+}
+
+.footer-container > div:nth-child(3) {
+    float: right;
+    text-align: left;
+    width: 33.3%;
+}
+
+.column {
+    /* padding-bottom: 25%; */
+    height: 100%;
+}
+
+.column p,
+.column h2 {
+    color: white;
+    border-bottom: 1px solid gray;
+}
+
+.column a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.map-link :hover {
+    color: #FFD800;
+}
+.column ul {
+    list-style: none;
+    margin: 0px 0px 0px -2%;
+    padding: 0px;
+}
+
+.column li {
+    margin: 2%;
+    /* border: 1px solid red; */
+}
+
+.column li :hover {
+    color: #FFD800;
+}
+
+.column-text {
+    padding-left: 5%;
+}

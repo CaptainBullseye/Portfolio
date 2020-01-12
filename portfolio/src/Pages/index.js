@@ -6,6 +6,7 @@ import 'react-animated-slider/build/horizontal.css';
 import ContentSlider from '../components/SlideContent/SlideContent';
 import About from '../components/About/About';
 import VerticalProgBar from '../components/VerticalProgBar/VerticalProgbar';
+import Footer from '../components/Footer/Footer';
 
 class MainPage extends Component {
     state = {
@@ -29,7 +30,7 @@ class MainPage extends Component {
             backdrop = <Backdrop click={this.backdropClickHandler}/>
         }
         return(
-            <div style={{height: '100%', width: '100%'}}>
+            <div style={{height: '100%', width: '100%'}} id="content">
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}
@@ -38,7 +39,9 @@ class MainPage extends Component {
 
                 <About />
 
-                <VerticalProgBar />          
+                <VerticalProgBar />
+                
+                <Footer />  
 
             </div>
         )

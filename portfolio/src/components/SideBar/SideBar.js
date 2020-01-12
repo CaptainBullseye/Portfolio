@@ -1,6 +1,6 @@
 import React from 'react';
 import './SideBarStyle.css';
-import {Link} from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const sideBar = props => {
     let sideBarClasses = 'side-bar';
@@ -10,10 +10,13 @@ const sideBar = props => {
     return (<nav className={sideBarClasses}>
         <ul>
             <li>
-                <Link to="/NotN">Night Of The Nerds</Link>
+                <a href="/">Home</a>
             </li>
             <li>
-                <Link to="/Projecten">Projecten</Link>
+                <a href="/NotN">Night Of The Nerds</a>
+            </li>
+            <li>
+                <a href="/Projecten">Projecten</a>
             </li>
         </ul>
     </nav>
