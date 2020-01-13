@@ -38,7 +38,7 @@ const toolbar = props => (
                 <div className="spacer" />
                 <div className="toolbar_nav_items">
                     <ScrollspyNav
-                        scrollTargetIds={["top", "about", "tijdlijn", "footer"]}
+                        scrollTargetIds={["top", "about", "tijdlijn", "footer", "content"]}
                         offset={-80}
                         activeNavClass="is-active"
                         scrollDuration="1000"

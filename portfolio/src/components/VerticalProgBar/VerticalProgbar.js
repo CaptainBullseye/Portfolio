@@ -133,15 +133,13 @@ class VerticalProgBar extends React.Component {
         // console.log(currentFilter + " log currentFilter 2")
         // om een of andere reden neemt de setState category niet over
         this.setState({
-            state: {
-                currentFilter: category,
-                filteredData: filteredData
-            }
+            currentFilter: category,
+            filteredData: filteredData
         });
         // console.log(currentFilter)
-        console.log(this.state)
-        console.log("this.state.filteredData hieronder")
-        console.log(this.state.filteredData)
+        console.log("function", this.state, this)
+        // console.log("this.state.filteredData hieronder")
+        // console.log(this.state.filteredData)
     }
 
     render() {
@@ -174,12 +172,12 @@ class VerticalProgBar extends React.Component {
                             iconStyle={{ background: item.kleur, color: '#fff' }}
                             icon={<FontAwesomeIcon icon={item.iconn} />}
                         >
-                            {/* {console.log(this.state.filteredData)} */}
+                            {console.log("render", this.state.filteredData, this)}
 
                             {/* this.state.filteredData geeft de volledige
                                 lijst weer (alle 7 blokken). de functie word genegeerd. */}
                             
-                            {/* {console.log("ronde")} */}
+                            {console.log("ronde")}
                             
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
