@@ -1,5 +1,5 @@
 import React from 'react';
-import '../About/About.css';
+import './content.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -25,10 +25,10 @@ const divcontent = [
 const Content = () => (
     <React.Fragment>
         {divcontent.map((e, index) =>
-            <section key={index} data-aos="zoom-in" className="about-wrapper" id="content" >
-                <img className="about-foto" src={e.afbeelding}  alt="logo" />
-                <h1 className="about-header">{e.titel}</h1>
-                <div className="about-tekst">
+            <section key={index} data-aos="zoom-in" className="item-wrapper" id="content" >
+                <img className="item-foto" src={e.afbeelding}  alt="logo" />
+                <h1 className="item-header">{e.titel}</h1>
+                <div className="item-tekst">
                     <p>{e.inhoud}</p>
                 </div>
             </section>

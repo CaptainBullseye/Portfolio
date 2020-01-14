@@ -123,13 +123,15 @@ class VerticalProgBar extends React.Component {
             filteredData: info
         }
     }
+
     change(category) {
         // console.log(currentFilter + " log currentFilter 1")
         
         let filteredData = info.filter(function (selected) {
             return selected.categorie === category;
         });
-        console.log(filteredData)
+        // console.log(filteredData)
+
         // console.log(currentFilter + " log currentFilter 2")
         // om een of andere reden neemt de setState category niet over
         this.setState({
@@ -137,7 +139,8 @@ class VerticalProgBar extends React.Component {
             filteredData: filteredData
         });
         // console.log(currentFilter)
-        console.log("function", this.state, this)
+        // console.log("function", this.state, this)
+
         // console.log("this.state.filteredData hieronder")
         // console.log(this.state.filteredData)
     }
@@ -152,13 +155,12 @@ class VerticalProgBar extends React.Component {
 
                 {/* {console.log(filteredData)} filteredData' is not defined */}
 
-                <div className="filter-buttons-container" data-aos="zoom-in" >
+                <div className="filter-buttons-container" data-aos="zoom-in" id="tijdlijn" >
                     <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button>
                     <button className="filter-button" type='button' onClick={() => this.change('projecten')} >Projecten</button>
                     <button className="filter-button" type='button' onClick={() => this.change('werk')} >Werk</button>
-                    <button className="filter-button" type='button' onClick={() => this.change('')} >Alles</button>
+                    <button className="filter-button" type='button' onClick={() => this.change(info.categorie)} >Alles</button>
                 </div>
-                <div id="tijdlijn" />
                 <VerticalTimeline>
 
                     {this.state.filteredData.map((item, index) => (
@@ -172,12 +174,12 @@ class VerticalProgBar extends React.Component {
                             iconStyle={{ background: item.kleur, color: '#fff' }}
                             icon={<FontAwesomeIcon icon={item.iconn} />}
                         >
-                            {console.log("render", this.state.filteredData, this)}
+                            {/* {console.log("render", this.state.filteredData, this)} */}
 
                             {/* this.state.filteredData geeft de volledige
                                 lijst weer (alle 7 blokken). de functie word genegeerd. */}
                             
-                            {console.log("ronde")}
+                            {/* {console.log("ronde")} */}
                             
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>

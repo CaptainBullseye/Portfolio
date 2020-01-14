@@ -13,7 +13,10 @@ const Footer = () => (
     <footer>
         <div className="footer-container" id="footer">
             <div className="column">
-                <div className="column-text" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                <div className="column-text" 
+                data-aos="fade-up" 
+                data-aos-easing="ease-in-sine" 
+                data-aos-duration="500">
                     <h2>Contact</h2>
                     {/* mail, linkedin, CV,  */}
                     <ul>
@@ -40,7 +43,10 @@ const Footer = () => (
                 </div>
             </div>
             <div className="column">
-                <div className="column-text" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                <div className="column-text" 
+                data-aos="fade-up" 
+                data-aos-easing="ease-in-sine" 
+                data-aos-duration="500">
                     <h2>Sitemap</h2>
                     <ul>
                         <li><Link to="/">Home</Link></li>
@@ -50,7 +56,10 @@ const Footer = () => (
                 </div>
             </div>
             <div className="column">
-                <div className="column-text" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                <div className="column-text" 
+                data-aos="fade-up" 
+                data-aos-easing="ease-in-sine" 
+                data-aos-duration="500">
                     <h2>Colomn 3</h2>
                     <a href="/">
                         <span>text 2</span>

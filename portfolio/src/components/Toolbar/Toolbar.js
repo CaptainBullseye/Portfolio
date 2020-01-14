@@ -3,9 +3,9 @@ import React from 'react';
 import './ToolbarStyle.css';
 import SidebarToggle from '../SideBar/SideBarToggle';
 import Logo from "../images/logo.png";
-import ScrollspyNav from "react-scrollspy-nav";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
-const tester = [
+const tagInfo = [
     {
         page: '/',
         sub: 'About',
@@ -15,17 +15,23 @@ const tester = [
         page: '/',
         sub: 'Tijdlijn',
         spy: '#tijdlijn'
+    },
+    {
+        page: '/NotN',
+        sub: 'Content',
+        spy: '#content'
     }
 ];
 
-let go = tester.filter(function (selected) {
+let tag = tagInfo.filter(function (selected) {
     return selected.page === window.location.pathname;
 });
-console.log(go);
+
+console.log(tag.page);
 
 const toolbar = props => (
-    <div>
-        <header className="toolbar" id="top">
+    <div id="top">
+        <header className="toolbar">
             <nav className="toolbar_navigation">
                 <div>
                     <SidebarToggle click={props.sideBarClickHandler} />
@@ -37,26 +43,22 @@ const toolbar = props => (
 
                 <div className="spacer" />
                 <div className="toolbar_nav_items">
-                    <ScrollspyNav
-                        scrollTargetIds={["top", "about", "tijdlijn", "footer", "content"]}
-                        offset={-80}
-                        activeNavClass="is-active"
-                        scrollDuration="1000"
-                        headerBackground="false">
+                    {console.log(tag.spy)}
+                                               
                         <ul>
                             <li>
-                                <a href="#top">Top</a>
+                                <AnchorLink href="#top" offset='100'>Top</AnchorLink>
                             </li>
-                            {go.map((item, index) =>
-
+                            {tag.map((item, index) =>
                                 <li key={index}>
-                                    <a href={item.spy}>{item.sub}</a>
+                                    <AnchorLink offset='80' href={item.spy}>{item.sub}</AnchorLink>
+                                    {console.log(item.spy)}
                                 </li>)}
+                                
                             <li>
-                                <a href="#footer">Footer</a>
+                                <AnchorLink href="#footer">Footer</AnchorLink>
                             </li>
                         </ul>
-                    </ScrollspyNav>
                 </div>
             </nav>
         </header>

@@ -39,6 +39,7 @@
     color: white;
     /* border: 1px solid #06e3f5; */
     max-width: 1200px;
+    display: inline-block;
 }
 
 .about-header {
@@ -46,4 +47,5 @@
     /* border: 1px solid #73ff00; */
     display: flex;
     margin-bottom: 2px;
+    padding-top: 4%;
 }
