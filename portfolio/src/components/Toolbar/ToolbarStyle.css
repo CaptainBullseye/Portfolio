@@ -49,6 +49,7 @@
 .toolbar_nav_items a {
     color: white;
     text-decoration: none;
+    transition: all .5s ease;
 }
 
 .toolbar_nav_items a:hover, 

@@ -31,7 +31,7 @@ class Notn extends Component {
         return(
             <div style={{height: '100%', width: '100%'}} id="about tijdlijn">
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
-                <SideBar show={this.state.sideBarOpen} />
+                <SideBar show={this.state.sideBarOpen} closeClickHandler={this.backdropClickHandler}/>
                 {backdrop}
                 <Content />
                 <Footer />

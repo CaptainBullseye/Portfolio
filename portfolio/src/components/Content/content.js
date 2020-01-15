@@ -14,8 +14,8 @@ const divcontent = [
         titel: 'Wat is Night of The Nerds?',
         inhoud: 
         "Night of the Nerds is hét event waar gepassioneerde nerds de allernieuwste ontwikkelingen in de wereld van innovatie, techniek en creativiteit tonen." +
-        "Mijn groep en ik stonden als de \"Designerds\" op Night of The Nerds met ons project KYK. Onze opdracht was om een interactieve installatie te maken om video's van Veejays.com " +
-        "en de AKV Sint Joost animatie studie te laten zien, Om zo interesse op te wekken voor die studies op een interactieve manier.",
+        " Mijn groep en ik stonden als de \"Designerds\" op Night of The Nerds met ons project KYK. Onze opdracht was om een interactieve installatie te maken om video's van Veejays.com " +
+        " en de AKV Sint Joost animatie studie te laten zien, Om zo interesse op te wekken voor die studies op een interactieve manier.",
         afbeelding: Dennis
     },
     {

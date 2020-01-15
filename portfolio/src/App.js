@@ -16,6 +16,7 @@ import MainPage from "./Pages/index";
 import Notn from "./Pages/NotN";
 import PageNotFound from "./Pages/404";
 import TimKoehoorn from './Pages/TimKoehoorn';
+import Picoo from './Pages/Picoo';
 
 library.add(faGraduationCap);
 
@@ -28,6 +29,7 @@ class App extends Component {
                     <Route exact path="/NotN" component={Notn} />
                     <Route exact path="/404" component={PageNotFound}/>
                     <Route exact path="/TimKoehoorn" component={TimKoehoorn} />
+                    <Route exact path="/Picoo" component={Picoo} />
                     <Redirect to="/404" />
                 </Switch>
             </Router>

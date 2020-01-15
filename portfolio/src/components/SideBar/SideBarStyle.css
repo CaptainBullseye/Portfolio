@@ -33,9 +33,24 @@
     color: white;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: all .5s ease;
 }
 
 .side-bar a:hover, 
 .side-bar a:active {
     color: #FFD800;
+}
+
+.close {
+    /* border: 1px solid red; */
+    margin-left: 1rem;
+    width: fit-content;
+    margin-top: 7%;
+    padding: 0px 5px;
+    background: transparent;
+}
+
+.close :hover {
+    color: #FFD800;
+    background: transparent;
 }

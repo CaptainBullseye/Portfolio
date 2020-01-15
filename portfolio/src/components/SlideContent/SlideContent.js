@@ -26,7 +26,7 @@ const content = [
 		description:
 		'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
 		button: 'Discover',
-		page:'',
+		page:'/TimKoehoorn',
 		image: 'https://i.imgur.com/DCdBXcq.jpg',
 		user: '',
 		userProfile: ''
@@ -36,7 +36,7 @@ const content = [
 		description:
 		'In mijn maatwerk semester ben ik samen met een groep gaan werken aan een brandguide voor het bedrijf Picoo.',
 		button: 'Lees verder',
-		page:'',
+		page:'/Picoo',
 		image: 'https://i.imgur.com/DvmN8Hx.jpg',
 		user: '',
 		userProfile: '' 
@@ -46,7 +46,7 @@ const content = [
 const ContentSlider = () => (
 	<div>
 		
-		<Slider className="slider-wrapper">
+		<Slider className="slider-wrapper" autoplay= '2500'>
 			{content.map((item, index) => (
 				<div
 					key={index}

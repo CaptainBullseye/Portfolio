@@ -47,16 +47,16 @@ const toolbar = props => (
                                                
                         <ul>
                             <li>
-                                <AnchorLink href="#top" offset='100'>Top</AnchorLink>
+                                <AnchorLink href="#top" offset='100'><strong>Top</strong></AnchorLink>
                             </li>
                             {tag.map((item, index) =>
                                 <li key={index}>
-                                    <AnchorLink offset='80' href={item.spy}>{item.sub}</AnchorLink>
+                                    <AnchorLink offset='80' href={item.spy}><strong>{item.sub}</strong></AnchorLink>
                                     {console.log(item.spy)}
                                 </li>)}
                                 
                             <li>
-                                <AnchorLink href="#footer">Footer</AnchorLink>
+                                <AnchorLink href="#footer"><strong>Contact</strong></AnchorLink>
                             </li>
                         </ul>
                 </div>
