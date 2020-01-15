@@ -3,14 +3,6 @@
     /* border: 1px solid purple; */
 }
 
-@media only screen and (min-width: 1170px) {
-    .item-wrapper {
-        margin-left: 300px;
-        /* border: 1px solid purple; */
-        min-height: 350px;
-    }
-}
-
 .item-foto {
     height: 350px;
     width: 350px;
@@ -22,30 +14,81 @@
 
 }
 
-@media only screen and (max-width: 1169px) {
-    .item-foto {
-        height: 200px;
-        width: 200px;
-    }
-
-    .item-wrapper {
-        /* height: 200px; */
-        margin-left: 10px;
-        min-height: 200px;
-    }
-}
-
 .item-tekst {
     color: white;
     /* border: 1px solid #06e3f5; */
-    max-width: 1200px;
+    max-width: 70%;
     display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    line-height: 150%;
 }
 
 .item-header {
-    color: white;
+    color: #FFD800;
     /* border: 1px solid #73ff00; */
     display: flex;
     margin-bottom: 2px;
     padding-top: 4%;
+    padding-left: 2%;
+}
+
+@media only screen and (min-width: 1170px) {
+    .item-wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+        /* border: 1px solid purple; */
+        min-height: 350px;
+    }
+
+    .item-tekst {
+        color: white;
+        /* border: 1px solid #06e3f5; */
+        max-width: 70%;
+        display: inline-block;
+        padding-left: 2%;
+        padding-right: 2%;
+        line-height: 150%;
+    }
+    
+    .item-header {
+        color: #FFD800;
+        /* border: 1px solid #73ff00; */
+        display: flex;
+        margin-bottom: 2px;
+        padding-top: 4%;
+        padding-left: 2%;
+    }
+}
+
+@media only screen and (max-width: 1402px) {
+    .item-foto {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 1169px) {
+
+    .item-wrapper {
+        /* height: 200px; */
+        margin-left: 10px;
+        margin-right: 10px;
+        min-height: 200px;
+    }
+
+    .item-tekst {
+        color: white;
+        /* border: 1px solid #06e3f5; */
+        max-width: 100%;
+    }
+    
+    .item-header {
+        color: #FFD800;
+        /* border: 1px solid #73ff00; */
+        display: flex;
+        margin-bottom: 2px;
+        padding-top: 15%;
+        font-size: 150%;
+    }
 }

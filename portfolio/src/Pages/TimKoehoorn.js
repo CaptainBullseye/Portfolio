@@ -3,8 +3,9 @@ import Toolbar from '../components/Toolbar/Toolbar';
 import SideBar from '../components/SideBar/SideBar';
 import Backdrop from '../components/Backdrop/Backdrop';
 import 'react-animated-slider/build/horizontal.css';
+import Footer from '../components/Footer/Footer';
 
-class Projecten extends Component {
+class TimKoehoorn extends Component {
     state = {
         sideBarOpen: false
     }
@@ -30,10 +31,12 @@ class Projecten extends Component {
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} />
                 {backdrop}
+
+                <Footer />
                 
             </div> 
         )
     };    
 }
 
-export default Projecten;
+export default TimKoehoorn;

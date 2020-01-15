@@ -16,7 +16,7 @@ const sideBar = props => {
                 <a href="/NotN">Night Of The Nerds</a>
             </li>
             <li>
-                <a href="/Projecten">Projecten</a>
+                <a href="/TimKoehoorn">Tim Koehoorn</a>
             </li>
         </ul>
     </nav>

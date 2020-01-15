@@ -14,7 +14,7 @@ const content = [
 	{
 		title: 'Night of the Nerds',
 		description:
-		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds.',
+		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds. ',
 		button: 'Read More',
 		page:'/NotN',
 		image: 'https://www.vdlgroep.com/_cache/_public/NOTN-2017_YXJfMTI2MHg4NDBfZF8xX2pwZ18vX2Fzc2V0L19wcml2YXRlL25ld3MvMjQ_ff16f5ce.jpg',
@@ -22,9 +22,9 @@ const content = [
 		userProfile: ''
 	},
 	{
-		title: 'Tortor Dapibus Commodo Aenean Quam',
+		title: 'Tim Koehoorn',
 		description:
-		'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
+		'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
 		button: 'Discover',
 		page:'',
 		image: 'https://i.imgur.com/DCdBXcq.jpg',
@@ -32,10 +32,10 @@ const content = [
 		userProfile: ''
 	},
 	{
-		title: 'Phasellus volutpat metus',
+		title: 'Picoo',
 		description:
-		'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.',
-		button: 'Buy now',
+		'In mijn maatwerk semester ben ik samen met een groep gaan werken aan een brandguide voor het bedrijf Picoo.',
+		button: 'Lees verder',
 		page:'',
 		image: 'https://i.imgur.com/DvmN8Hx.jpg',
 		user: '',
