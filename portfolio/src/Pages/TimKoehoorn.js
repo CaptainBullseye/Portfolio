@@ -3,6 +3,7 @@ import Toolbar from '../components/Toolbar/Toolbar';
 import SideBar from '../components/SideBar/SideBar';
 import Backdrop from '../components/Backdrop/Backdrop';
 import 'react-animated-slider/build/horizontal.css';
+import Content from '../components/Content/content';
 import Footer from '../components/Footer/Footer';
 
 class TimKoehoorn extends Component {
@@ -31,7 +32,7 @@ class TimKoehoorn extends Component {
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} closeClickHandler={this.backdropClickHandler}/>
                 {backdrop}
-
+                <Content />
                 <Footer />
                 
             </div> 

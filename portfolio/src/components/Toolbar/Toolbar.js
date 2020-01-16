@@ -20,6 +20,16 @@ const tagInfo = [
         page: '/NotN',
         sub: 'Content',
         spy: '#content'
+    },
+    {
+        page: '/TimKoehoorn',
+        sub: 'Content',
+        spy: '#content'
+    },
+    {
+        page: '/Picoo',
+        sub: 'Content',
+        spy: '#content'
     }
 ];
 
