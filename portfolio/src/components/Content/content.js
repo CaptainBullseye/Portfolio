@@ -7,8 +7,22 @@ import "aos/dist/aos.css";
 // import data from "../Data/contentData.json" 
 
 //images
-import Dennis from "../images/dennis.png";
-import Logo from "../images/logo.png"
+import NotnLogo from "../images/Notn/Notn-logo.png";
+import Mat from "../images/Notn/mat.png";
+import WereDi from "../images/Notn/school.jpg";
+import Concept from "../images/Notn/concept.png";
+import Installatie from "../images/Notn/install.jpg";
+
+import Tim from "../images/Tim/Tim.jpg";
+// import Paletten from "../images/Tim/paletten.jpg";
+import Bowlen from "../images/Tim/bowlen2.jpg";
+import Album from "../images/Tim/album.jpg";
+import Sheet from "../images/Tim/logoSheet.jpg"
+
+import PicooLogo from "../images/Picoo/logo-picoo2.png";
+import Poster from "../images/Picoo/poster.jpg";
+import Scherm from "../images/Picoo/scherm.jpg";
+import PicooCard from "../images/Picoo/Bcard.jpg";
 
 AOS.init();
 
@@ -24,6 +38,7 @@ const divcontent =
         //     afbeelding: Dennis,
         //     page: "/"
         // }
+        
         // Night of the Nerds dingen hier
         {
             titel: 'Wat is Night of The Nerds?',
@@ -31,7 +46,7 @@ const divcontent =
                 "Night of the Nerds is hét event waar gepassioneerde nerds de allernieuwste ontwikkelingen in de wereld van innovatie, techniek en creativiteit tonen." +
                 " Mijn groep en ik stonden als de \"Designerds\" op Night of The Nerds met ons project KYK. Onze opdracht was om een interactieve installatie te maken om video's van Veejays.com " +
                 " en de AKV Sint Joost animatie studie te laten zien, Om zo interesse op te wekken voor die studies op een interactieve manier.",
-            afbeelding: Dennis,
+            afbeelding: NotnLogo,
             page: '/NotN'
         },
         {
@@ -45,7 +60,7 @@ const divcontent =
                 " de iets wat kleinere tests zoals \"Maken we het scrollen verticaal zoals in DDR of horizontaal?\" \"Hoe lang mogen de video's duren? (aandachtsboog kinderen 14 t/m 18)\"." +
                 " Uiteindelijk aan het einde van het semester werd er door onze opdrachtgever bekend gemaakt welk project werd gekozen om ook echt op Night of The Nerds te staan en ik kan trots zeggen" +
                 " dat ons project werd gekozen.",
-            afbeelding: Logo,
+            afbeelding: Mat,
             page: '/NotN'
         },
         {
@@ -57,7 +72,7 @@ const divcontent =
                 ' de klas. Ook zagen we welke kinderen de "populaire" kinderen waren en als hun een mening hadden dan had de rest van de klas die ook. Uit onze test bij onze 1ste klas hadden we dus' +
                 ' eigenlijk geen nuttige informatie over onze ideeën gekregen maar wel belangrijke info gekregen over hoe de middelbare scholieren zich gedragen. Bij de andere 2 klassen hadden we' +
                 ' ervoor gekozen om de kinderen hun feedback op te laten schrijven zodat het annoniem was waardoor we juist heel veel feedback kregen over onze ideeen.',
-            afbeelding: Logo,
+            afbeelding: WereDi,
             page: '/NotN'
         },
         {
@@ -70,7 +85,7 @@ const divcontent =
                 " slecht zou zijn (wat ook klopte) ook hadden we het idee om het met controllers te doen maar toen kregen we van onze opdrachtgever te horen dat ze uit ervaring van vorige Night of" +
                 " The Nerds weet dat de controllers dan zouden worden gestolen of kapot zouden gaan. Na een brainstormsessie met de opdrachtgever kwamen we uit op het idee van touwtjes trekken." +
                 " Hierbij zou er een snelle interactie zijn (alleen aan een touwtje trekken) en groepsdruk zou dan ook geen rol spelen omdat wat je krijgt van de touwtjes compleet willekeurig zou zijn.",
-            afbeelding: Dennis,
+            afbeelding: Concept,
             page: '/NotN'
         },
         {
@@ -79,7 +94,7 @@ const divcontent =
                 "Toen we uiteindelijk ons touwtjes trekken concept hadden uitgewerkt en getest bleek het een succes te zijn. Het feit dat ergens touwtjes hingen vonden mensen al interessant" +
                 " genoeg om eraan te trekken, maar we hebben er alsnog voor gekozen om EL draden te gebruiken i.p.v. gewoon touw omdat dat ook meer in de stijl van Night of The Nerds is en het" +
                 " geeft licht wat ook weer aandacht trekt. Voor meer informatie en alle documenten van ons project ga naar dennisvulders.wordpress.com",
-            afbeelding: Dennis,
+            afbeelding: Installatie,
             page: '/NotN'
         },
         // Tim Koehoorn dingen hier
@@ -88,7 +103,7 @@ const divcontent =
             inhoud:
                 "In Semester 2 moesten wij voor onze proftaak een brandguide maken voor een student van de Fontys rockacademie. Mijn klas kreeg de muzikant Tim Koehoorn, een singer songwriter" +
                 " die Nederlandstalige muziek maakt. Uiteindelijk moesten we in groepjes van 6 personen aan de slag om goede branding voor Tim te maken.",
-            afbeelding: Logo,
+            afbeelding: Tim,
             page: "/TimKoehoorn"
         },
         {
@@ -98,8 +113,8 @@ const divcontent =
                 " Nadat we ons onderzoek naar andere artiesten hadden gedaan en daar een aantal conclusies uit hadden getrokken, gingen we weer met Tim rond de tafel zitten en lieten we zien wat we" +
                 " onze bevindingen waren (kleur palletten, logo stijlen, lettertypes, etc). Uiteraard waren het de eerste versies en hebben we er verder op geïtereerd a.d.h.v. Tim zijn commentaar en" +
                 " verder onderzoek.",
-            afbeelding: Logo,
-            page: ""
+            afbeelding: Sheet,
+            page: "/TimKoehoorn"
         },
         {
             titel: "Dagje uit met Tim",
@@ -108,7 +123,7 @@ const divcontent =
                 " discobowlen omdat we op dat moment nog aan het experimenteren waren met meer donkerblauwe en paarse kleuren en dit leek ons dan ook een perfect moment om een photoshoot" +
                 " te houden. We kwamen hier er wel achter dat we toch naar andere kleuren moesten overstappen omdat het niet echt bij Tim past. Ook een reden dat we voor discobowlen hadden" +
                 " gekozen i.p.v. bijvoorbeeld ergens op een terrasje wat gaan drinken was omdat Tim bowlen leuk vind en hier dus ook meer op zijn gemak zou zijn.",
-            afbeelding: Logo,
+            afbeelding: Bowlen,
             page: "/TimKoehoorn"
         },
         {
@@ -118,16 +133,18 @@ const divcontent =
                 " omdat Tim onze brandguide uiteindelijk had gekozen om te gebruiken, hij heeft bijvoorbeeld bij zijn laatste album cover onze brandguide toegepast. Helaas staat de website" +
                 " die we voor Tim Koehoorn hebben gemaakt niet meer online en mijn groepsgenoot die ervoor zorgde kon de files helaas niet meer vinden. Hieronder staan nog 2 bestanden: Een" +
                 " pdf waarin nog website designs en offline middelen te zien zijn en de uiteindelijke brandguide.",
-            afbeelding: Logo,
+            afbeelding: Album,
             page: "/TimKoehoorn"
         },
+
+        // Picoo dingen
         {
             titel: "Wat is Picoo?",
             inhoud:
                 "Picoo is een klein bedrijf in Eindhoven met als missie kinderen weer actief willen maken en ze proberen d.m.v. hun picoos het actief samen spelen te stimuleren. Een picoo" +
                 " is een spelcomputer die combineert waar kinderen van houden: interactieve technologie en actief samen spelen. Zo komen interactief en traditioneel spelen samen in een" +
                 " compleet nieuwe experience.",
-            afbeelding: Logo,
+            afbeelding: PicooLogo,
             page: "/Picoo"
         },
         {
@@ -140,7 +157,7 @@ const divcontent =
                 " genoeg verbeterpunten waren. We hebben bijvoorbeeld al in de eerste paar weken een aantal schetsen gemaakt voor verbeteringen van de pagina's en pagina's die nog niet" +
                 " bestonden. Helaas kregen we toen van hun te horen dat het niet handig zou zijn dat we aan een website gaan werken aangezien hun eigen web-developer nog volop bezig is" +
                 " met het verbeteren van de website waardoor vrijwel zinloos zou zijn als wij ook een website zouden maken.",
-            afbeelding: Logo,
+            afbeelding: Scherm,
             page: "/Picoo"
         },
         {
@@ -149,7 +166,7 @@ const divcontent =
                 "Nadat we te horen kregen dat we niet aan een website zouden kunnen werken hebben we in overleg met Picoo en onze docenten besloten dat we een brandguide voor hun zouden"+
                 " maken, aangezien ze deze ook nog niet hebben waardoor ze op een aantal vlakken niet consequent waren. Ook zijn we bezig met een aantal middelen te crëeren zoals posters,"+
                 " visitekaartjes etc. Ons doel voor dit semester is dan ook dat we Picoo een sterke fundering geven waarop ze al hun toekomstige branding op kunnen baseren.",
-            afbeelding: Logo,
+            afbeelding: Poster,
             page: "/Picoo"
         },
         {
@@ -158,7 +175,7 @@ const divcontent =
                 "Ons project is de Woensdag voor de kerstvakantie afgelopen. Uiteindelijk hebben we Picoo een volledige brandguide aangeleverd met de daarbij behorende onderzoeksdocumenten."+
                 " Tetske (ons contact persoon bij Picoo) vertelde ons dat ze het leuk/fijn vond om met ons samen te werken en dat we een goed eindproduct hebben geleverd. Als groep zijn we"+
                 " ook zeer tevreden met het resultaat.",
-            afbeelding: Logo,
+            afbeelding: PicooCard,
             page: "/Picoo"
         }
 
@@ -168,21 +185,23 @@ let filteredContent = divcontent.filter(function (filtered) {
     return filtered.page === window.location.pathname;
 });
 
-// var x = 4;
-// var y = 2;
-// var z = x % y;
-// var bgcolor = 'green'
+var x = 3;
+var y = 2;
+var z = x % y;
+var fotoPos = 'item-foto-left'
 
-// console.log(z);
+console.log(z);
 
-// if (z === 0) {
-//     bgcolor = 'red'
-//     console.log("het is even")
-// }
-// else{
-//     console.log("het is oneven")
-//     bgcolor = 'blue'
-// }
+if (z === 0) {
+    console.log(x + " het is even")
+    fotoPos = 'item-foto-right';
+    x++;
+}
+else{
+    console.log(x +" het is oneven")
+    fotoPos = 'item-foto-left';
+    x++;
+}
 
 
 
@@ -190,11 +209,12 @@ const Content = () => (
     <React.Fragment>
         {filteredContent.map((e, index) =>
             <section key={index} data-aos="zoom-in" className="item-wrapper" id="content">
-                <img className="item-foto" src={e.afbeelding} alt="logo" />
+                <img className={fotoPos} src={e.afbeelding} alt="logo" />
                 <h1 className="item-header">{e.titel}</h1>
                 <div className="item-tekst">
                     <p>{e.inhoud}</p>
                 </div>
+                {console.log(x)}
             </section>
         )}
     </React.Fragment>

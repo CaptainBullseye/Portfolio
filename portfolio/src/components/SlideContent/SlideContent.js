@@ -4,7 +4,6 @@ import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
 import './slider-animations.css';
 import './styles.css';
-import { Link } from 'react-router-dom';
 
 const content = [
     /* content cheatsheet:
@@ -56,7 +55,7 @@ const ContentSlider = () => (
 					<div className="inner">
 						<h1>{item.title}</h1>
 						<p style={{fontSize: 16}}><strong>{item.description}</strong></p>
-						<Link to={item.page}><button>{item.button}</button></Link>
+						<a href={item.page}><button>{item.button}</button></a>
 					</div>
 					{/* <section>
 						<img src={item.userProfile} alt={item.user} />
