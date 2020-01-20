@@ -5,6 +5,7 @@ import Backdrop from '../components/Backdrop/Backdrop';
 import 'react-animated-slider/build/horizontal.css';
 import Content from '../components/Content/content';
 import Footer from '../components/Footer/Footer';
+import ProjectSlider from '../components/SlideContent/SlideProject';
 
 class Notn extends Component {
     state = {
@@ -33,6 +34,7 @@ class Notn extends Component {
                 <Toolbar sideBarClickHandler={this.sideBarToggleClickHandler} />
                 <SideBar show={this.state.sideBarOpen} closeClickHandler={this.backdropClickHandler}/>
                 {backdrop}
+                <ProjectSlider />
                 <Content />
                 <Footer />
                 

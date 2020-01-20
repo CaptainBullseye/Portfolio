@@ -5,6 +5,11 @@ import 'normalize.css/normalize.css';
 import './slider-animations.css';
 import './styles.css';
 
+// images
+import NotnBg from "../images/Notn/NOTN-bg.jpg";
+import Tim from "../images/Tim/Tim.jpg";
+import PicooHeader from "../images/Picoo/picoo-header.jpg"
+
 const content = [
     /* content cheatsheet:
        image: 1440 x maakt niet uit (voorkeur 1000+)
@@ -16,7 +21,7 @@ const content = [
 		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds. ',
 		button: 'Read More',
 		page:'/NotN',
-		image: 'https://www.vdlgroep.com/_cache/_public/NOTN-2017_YXJfMTI2MHg4NDBfZF8xX2pwZ18vX2Fzc2V0L19wcml2YXRlL25ld3MvMjQ_ff16f5ce.jpg',
+		image: NotnBg,
 		user: '',
 		userProfile: ''
 	},
@@ -26,7 +31,7 @@ const content = [
 		'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
 		button: 'Discover',
 		page:'/TimKoehoorn',
-		image: 'https://i.imgur.com/DCdBXcq.jpg',
+		image: Tim,
 		user: '',
 		userProfile: ''
 	},
@@ -36,7 +41,7 @@ const content = [
 		'In mijn maatwerk semester ben ik samen met een groep gaan werken aan een brandguide voor het bedrijf Picoo.',
 		button: 'Lees verder',
 		page:'/Picoo',
-		image: 'https://i.imgur.com/DvmN8Hx.jpg',
+		image: PicooHeader,
 		user: '',
 		userProfile: '' 
 	}

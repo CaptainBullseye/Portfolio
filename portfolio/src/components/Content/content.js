@@ -131,8 +131,7 @@ const divcontent =
             inhoud:
                 "Uiteindelijk na een heel semester samen met Tim Koehoorn te werken aan zijn brandguide hadden we een resultaat waar iedereen trots op was. Als groep waren we vooral trots" +
                 " omdat Tim onze brandguide uiteindelijk had gekozen om te gebruiken, hij heeft bijvoorbeeld bij zijn laatste album cover onze brandguide toegepast. Helaas staat de website" +
-                " die we voor Tim Koehoorn hebben gemaakt niet meer online en mijn groepsgenoot die ervoor zorgde kon de files helaas niet meer vinden. Hieronder staan nog 2 bestanden: Een" +
-                " pdf waarin nog website designs en offline middelen te zien zijn en de uiteindelijke brandguide.",
+                " die we voor Tim Koehoorn hebben gemaakt niet meer online en mijn groepsgenoot die ervoor zorgde kon de files helaas niet meer vinden.",
             afbeelding: Album,
             page: "/TimKoehoorn"
         },
@@ -185,25 +184,27 @@ let filteredContent = divcontent.filter(function (filtered) {
     return filtered.page === window.location.pathname;
 });
 
-var x = 3;
-var y = 2;
-var z = x % y;
-var fotoPos = 'item-foto-left'
+// var x = 3;
+// var y = 2;
+// var z = x % y;
+// var fotoPos = 'item-foto-left';
 
-console.log(z);
+// console.log(z);
 
-if (z === 0) {
-    console.log(x + " het is even")
-    fotoPos = 'item-foto-right';
-    x++;
+for (var x = 0; x <= filteredContent.length; x++) {
+    var y = 2;
+    var z = x % y;
+    var fotoPos = '';
+
+    if (z === 1) {
+        fotoPos = 'item-foto-right';
+        console.log(x +" het is even " + fotoPos)
+    }
+    else{
+        fotoPos = 'item-foto-left';
+        console.log(x +" het is oneven " + fotoPos)
+    }
 }
-else{
-    console.log(x +" het is oneven")
-    fotoPos = 'item-foto-left';
-    x++;
-}
-
-
 
 const Content = () => (
     <React.Fragment>
@@ -214,11 +215,10 @@ const Content = () => (
                 <div className="item-tekst">
                     <p>{e.inhoud}</p>
                 </div>
-                {console.log(x)}
+                {console.log(x + ' ' + fotoPos)}
             </section>
         )}
     </React.Fragment>
-
 );
 
 export default Content;

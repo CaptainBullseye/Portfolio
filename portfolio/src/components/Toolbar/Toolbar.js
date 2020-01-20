@@ -37,7 +37,7 @@ let tag = tagInfo.filter(function (selected) {
     return selected.page === window.location.pathname;
 });
 
-console.log(tag.page);
+// console.log(tag.page);
 
 const toolbar = props => (
     <div id="top">
@@ -53,7 +53,7 @@ const toolbar = props => (
 
                 <div className="spacer" />
                 <div className="toolbar_nav_items">
-                    {console.log(tag.spy)}
+                    {/* {console.log(tag.spy)} */}
                                                
                         <ul>
                             <li>
@@ -62,7 +62,7 @@ const toolbar = props => (
                             {tag.map((item, index) =>
                                 <li key={index}>
                                     <AnchorLink offset='80' href={item.spy}><strong>{item.sub}</strong></AnchorLink>
-                                    {console.log(item.spy)}
+                                    {/* {console.log(item.spy)} */}
                                 </li>)}
                                 
                             <li>
