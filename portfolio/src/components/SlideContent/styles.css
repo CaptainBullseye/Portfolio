@@ -183,6 +183,16 @@ button:hover {
   max-width: 640px;
 }
 
+.slider-content .inner a {
+  color: white;
+  font-size: 14px;
+}
+
+.slider-content .inner a:hover {
+  color: #FFD800;
+  transition: all .5s ease;
+}
+
 .slider-content section {
   position: absolute;
   bottom: 20px;

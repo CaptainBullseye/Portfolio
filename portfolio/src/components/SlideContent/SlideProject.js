@@ -8,7 +8,7 @@ import './styles.css';
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify, } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf, faBook, } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faBook, faExternalLinkAlt, } from '@fortawesome/free-solid-svg-icons';
 
 // images
 import NotnBg from "../images/Notn/NOTN-bg.jpg";
@@ -16,7 +16,9 @@ import Tim from "../images/Tim/Tim.jpg";
 import Tim2 from "../images/Tim/Tim2.jpg";
 import Tim3 from "../images/Tim/Tim3.jpg";
 
-import PicooHeader from "../images/Picoo/picoo-header.jpg";
+import PicooBg1 from "../images/Picoo/picoo-header.jpg";
+import PicooBg2 from "../images/Picoo/background2.jpg";
+import PicooBg3 from "../images/Picoo/background3.jpg";
 
 //files
 import TimBrandguide from "../Files/Brandguide-Tim.pdf";
@@ -44,7 +46,7 @@ const slideInfo = [
     {
         title: 'Tim Koehoorn',
         description:
-            'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
+            'Beluister zijn muziek',
         button: 'Discover',
         page: '/TimKoehoorn',
         image: Tim,
@@ -54,7 +56,7 @@ const slideInfo = [
     {
         title: 'Tim Koehoorn',
         description:
-            'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
+            'Bekijk de brandguide die we voor Tim Hebben gemaakt',
         button: 'Discover',
         page: '/TimKoehoorn',
         image: Tim2,
@@ -64,7 +66,7 @@ const slideInfo = [
     {
         title: 'Tim Koehoorn',
         description:
-            'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
+            'Bekijk onze eindpresentatie waarin nog de website layout en offline producten te vinden zijn',
         button: 'Discover',
         page: '/TimKoehoorn',
         image: Tim3,
@@ -75,12 +77,32 @@ const slideInfo = [
     {
         title: 'Picoo',
         description:
-            'In mijn maatwerk semester ben ik samen met een groep gaan werken aan een brandguide voor het bedrijf Picoo.',
+            'Bekijk ook de website van Picoo',
         button: 'Lees verder',
         page: '/Picoo',
-        image: PicooHeader,
-        icon: '',
+        image: PicooBg1,
+        icon: faExternalLinkAlt,
+        link: 'https://picoo.nl/'
+    },
+    {
+        title: 'Picoo',
+        description:
+            'Bekijk de brandguide die we voor Picoo hebben gemaakt',
+        button: 'Lees verder',
+        page: '/Picoo',
+        image: PicooBg2,
+        icon: faBook,
         link: PicooBrandguide
+    },
+    {
+        title: 'Picoo',
+        description:
+            '',
+        button: 'Lees verder',
+        page: '/Picoo',
+        image: PicooBg3,
+        icon: faExternalLinkAlt,
+        link: "https://picoo.nl/"
     }
 ];
 
@@ -102,7 +124,7 @@ const ProjectSlider = () => (
                         <h1>{item.title}</h1>
                         <p style={{ fontSize: 16 }}><strong>{item.description}</strong></p>
                         <a target="_blank" rel="noopener noreferrer" href={item.link}>
-                            <FontAwesomeIcon icon={item.icon} style={{ color: "#FFD800", fontSize: "40px" }} />
+                            <FontAwesomeIcon icon={item.icon} style={{fontSize: "40px" }} />
                         </a>
                     </div>
                 </div>

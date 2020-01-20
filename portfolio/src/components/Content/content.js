@@ -210,7 +210,8 @@ const Content = () => (
     <React.Fragment>
         {filteredContent.map((e, index) =>
             <section key={index} data-aos="zoom-in" className="item-wrapper" id="content">
-                <img className={fotoPos} src={e.afbeelding} alt="logo" />
+                {/* <img className= {fotoPos} src={e.afbeelding} alt="logo" /> dit 'werkt' maar pakt alleen de laatste waarde en gebruikt deze voor alle foto's */} 
+                <img className= 'item-foto-left' src={e.afbeelding} alt="logo" />
                 <h1 className="item-header">{e.titel}</h1>
                 <div className="item-tekst">
                     <p>{e.inhoud}</p>
