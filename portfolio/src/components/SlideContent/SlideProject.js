@@ -12,6 +12,8 @@ import { faFilePdf, faBook, faExternalLinkAlt, } from '@fortawesome/free-solid-s
 
 // images
 import NotnBg from "../images/Notn/NOTN-bg.jpg";
+import Install from "../images/Notn/install.jpg"
+
 import Tim from "../images/Tim/Tim.jpg";
 import Tim2 from "../images/Tim/Tim2.jpg";
 import Tim3 from "../images/Tim/Tim3.jpg";
@@ -35,12 +37,32 @@ const slideInfo = [
     {
         title: 'Night of the Nerds',
         description:
-            'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds. ',
+            'Bekijk de website van Night of the Nerds',
         button: 'Read More',
         page: '/NotN',
         image: NotnBg,
-        icon: '',
-        link: ''
+        icon: faExternalLinkAlt,
+        link: 'https://www.nightofthenerds.com/'
+    },
+    {
+        title: 'Night of the Nerds',
+        description:
+            'Bekijk ons project op de Night of the nerds website',
+        button: 'Read More',
+        page: '/NotN',
+        image: Install,
+        icon: faExternalLinkAlt,
+        link: 'https://www.nightofthenerds.com/portfolio/kyk-videokunst-scrollen/'
+    },
+    {
+        title: 'Night of the Nerds',
+        description:
+            'Temp',
+        button: 'Read More',
+        page: '/NotN',
+        image: Install,
+        icon: faExternalLinkAlt,
+        link: 'https://www.nightofthenerds.com/'
     },
     // Tim Koehoorn dingen
     {
@@ -97,7 +119,7 @@ const slideInfo = [
     {
         title: 'Picoo',
         description:
-            '',
+            'Temp',
         button: 'Lees verder',
         page: '/Picoo',
         image: PicooBg3,

@@ -1,10 +1,12 @@
 import React from 'react';
 import './Footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGitlab, } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+import CV from "../Files/CV.pdf";
 
 AOS.init();
 
@@ -26,15 +28,15 @@ const Footer = () => (
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/dennis-vulders-b6b43a188/">
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/dennis-vulders-b6b43a188/">
                                 <FontAwesomeIcon icon={faLinkedin} style={{ color: "#FFD800", fontSize: "26px" }} />
                                 <span> LinkedIn</span>
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:dennisvulders@gmail.com">
-                                <FontAwesomeIcon icon={faGitlab} style={{ color: "#FFD800", fontSize: "26px" }} />
-                                <span> Text 1</span>
+                            <a target="_blank" rel="noopener noreferrer" href={CV}>
+                                <FontAwesomeIcon icon={faFilePdf} style={{ color: "#FFD800", fontSize: "26px" }} />
+                                <span> CV</span>
                             </a>
                         </li>
                     </ul>
@@ -62,7 +64,7 @@ const Footer = () => (
                     data-aos-duration="500">
                     <h2>Colomn 3</h2>
                     <a href="/">
-                        <span>text 2</span>
+                        <span>text 3</span>
                     </a>
                 </div>
             </div>
