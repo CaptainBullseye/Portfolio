@@ -56,16 +56,7 @@ const info = [
         onderwerp: 'HBO ICT & Media design',
         locatie: 'Fontys hogescholen',
         informatie: 'Mijn opleiding',
-        datum: 'Maand 2017 - Nu',
-        categorie: 'school',
-        kleur: kleurSchool,
-        iconn: faGraduationCap
-    },
-    {
-        onderwerp: 'Cardiff Certificaat',
-        locatie: 'Cardiff/Fontys hogescholen',
-        informatie: 'Uitwisselings programma naar Cardiff, Wales',
-        datum: 'Maand 2017',
+        datum: 'September 2017 - Nu',
         categorie: 'school',
         kleur: kleurSchool,
         iconn: faGraduationCap
@@ -74,16 +65,26 @@ const info = [
         onderwerp: 'Tim Koehoorn',
         locatie: 'Fontys hogescholen',
         informatie: 'Branding gemaakt voor Tim Koehoorn',
-        datum: 'Maand 2018 - Maand 2018',
+        datum: 'Februari 2018 - Juni 2018',
         categorie: 'projecten',
         kleur: kleurProjecten,
         iconn: faArchive
     },
     {
+        onderwerp: 'Cardiff Certificaat',
+        locatie: 'Cardiff/Fontys hogescholen',
+        informatie: 'Uitwisselings programma naar Cardiff, Wales',
+        datum: '9 April 2018 - 13 April 2018',
+        categorie: 'school',
+        kleur: kleurSchool,
+        iconn: faGraduationCap
+    },
+
+    {
         onderwerp: 'Night of the Nerds',
         locatie: 'Fontys hogescholen',
         informatie: "Project voor het tentoonstellen van video's van Veejays.com en de animatie opleiding van het Sint Lucas Eindhoven op een interactieve manier",
-        datum: 'Maand 2018 - Maand 2019',
+        datum: 'September 2018 - Juni 2019',
         categorie: 'projecten',
         kleur: kleurProjecten,
         iconn: faArchive
@@ -92,16 +93,16 @@ const info = [
         onderwerp: 'Picoo',
         locatie: 'Fontys hogescholen',
         informatie: 'Een uitgebreide brandguide maken voor het bedrijf Picoo',
-        datum: 'Maand 2019 - Maand 2020',
+        datum: 'September 2019 - Februari 2020',
         categorie: 'projecten',
         kleur: kleurProjecten,
         iconn: faArchive
     },
     {
         onderwerp: 'Stage',
-        locatie: 'Stage bedrijf',
+        locatie: 'Uw bedrijf?',
         informatie: 'Stage opdracht',
-        datum: 'Maand 2020 - Maand 2020',
+        datum: 'Februari 2020 - Juni 2020',
         categorie: 'werk',
         kleur: kleurWerk,
         iconn: faBriefcase
@@ -124,9 +125,19 @@ class VerticalProgBar extends React.Component {
         }
     }
 
+    clearFilter(category) {
+        let filteredData = info.filter(function (selected) {
+            return selected.categorie;
+        });
+        this.setState({
+            currentFilter: category,
+            filteredData: filteredData
+        });
+    }
+
     change(category) {
         // console.log(currentFilter + " log currentFilter 1")
-        
+
         let filteredData = info.filter(function (selected) {
             return selected.categorie === category;
         });
@@ -159,7 +170,7 @@ class VerticalProgBar extends React.Component {
                     <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button>
                     <button className="filter-button" type='button' onClick={() => this.change('projecten')} >Projecten</button>
                     <button className="filter-button" type='button' onClick={() => this.change('werk')} >Werk</button>
-                    <button className="filter-button" type='button' onClick={() => this.change(info.categorie)} >Alles</button>
+                    <button className="filter-button" type='button' onClick={() => this.clearFilter('alles')} >Alles</button>
                 </div>
                 <VerticalTimeline>
 
@@ -178,9 +189,9 @@ class VerticalProgBar extends React.Component {
 
                             {/* this.state.filteredData geeft de volledige
                                 lijst weer (alle 7 blokken). de functie word genegeerd. */}
-                            
+
                             {/* {console.log("ronde")} */}
-                            
+
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
                             <p>{item.informatie}</p>
@@ -193,6 +204,6 @@ class VerticalProgBar extends React.Component {
             </React.Fragment>
 
         )
-    } 
+    }
 }
 export default VerticalProgBar;

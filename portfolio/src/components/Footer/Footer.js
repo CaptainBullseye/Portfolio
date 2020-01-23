@@ -57,17 +57,6 @@ const Footer = () => (
                     </ul>
                 </div>
             </div>
-            <div className="column">
-                <div className="column-text"
-                    data-aos="fade-up"
-                    data-aos-easing="ease-in-sine"
-                    data-aos-duration="500">
-                    <h2>Colomn 3</h2>
-                    <a href="/">
-                        <span>text 3</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </footer>
 )

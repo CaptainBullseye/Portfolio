@@ -66,3 +66,7 @@ footer {
 .column-text {
     padding-left: 5%;
 }
+.columnlogo {
+    width: 100px;
+    height: 100px;
+}

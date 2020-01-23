@@ -7,12 +7,13 @@ import './styles.css';
 
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpotify, } from '@fortawesome/free-brands-svg-icons';
+import { faSpotify, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf, faBook, faExternalLinkAlt, } from '@fortawesome/free-solid-svg-icons';
 
 // images
 import NotnBg from "../images/Notn/NOTN-bg.jpg";
-import Install from "../images/Notn/install.jpg"
+import Install from "../images/Notn/install.jpg";
+import Notn2020 from "../images/Notn/notn2020.jpg";
 
 import Tim from "../images/Tim/Tim.jpg";
 import Tim2 from "../images/Tim/Tim2.jpg";
@@ -34,16 +35,7 @@ const slideInfo = [
     */
 
     //Night of the nerds dingen
-    {
-        title: 'Night of the Nerds',
-        description:
-            'Bekijk de website van Night of the Nerds',
-        button: 'Read More',
-        page: '/NotN',
-        image: NotnBg,
-        icon: faExternalLinkAlt,
-        link: 'https://www.nightofthenerds.com/'
-    },
+
     {
         title: 'Night of the Nerds',
         description:
@@ -57,12 +49,22 @@ const slideInfo = [
     {
         title: 'Night of the Nerds',
         description:
-            'Temp',
+            'Bekijk onze timelapse',
         button: 'Read More',
         page: '/NotN',
-        image: Install,
+        image: NotnBg,
         icon: faExternalLinkAlt,
-        link: 'https://www.nightofthenerds.com/'
+        link: 'https://www.youtube.com/watch?v=HUam0RIvrzI'
+    },
+    {
+        title: 'Night of the Nerds',
+        description:
+            'Haal alvast je tickets voor Night of the Nerds 2020',
+        button: 'Read More',
+        page: '/NotN',
+        image: Notn2020,
+        icon: faExternalLinkAlt,
+        link: 'https://www.nightofthenerds.com/tickets/'
     },
     // Tim Koehoorn dingen
     {
@@ -119,12 +121,12 @@ const slideInfo = [
     {
         title: 'Picoo',
         description:
-            'Temp',
+            'Volg Picoo ook op social media',
         button: 'Lees verder',
         page: '/Picoo',
         image: PicooBg3,
-        icon: faExternalLinkAlt,
-        link: "https://picoo.nl/"
+        icon: faTwitter,
+        link: "https://twitter.com/picooplay://picoo.nl/"
     }
 ];
 
