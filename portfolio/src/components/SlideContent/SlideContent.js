@@ -19,7 +19,7 @@ const content = [
 		title: 'Night of the Nerds',
 		description:
 		'Vanaf het begin van semester 3 tot het einde van semester 4 was ik samen met mijn groep de Designerds bezig aan een project voor Night of The Nerds. ',
-		button: 'Read More',
+		button: 'Lees meer',
 		page:'/NotN',
 		image: NotnBg,
 		user: '',
@@ -29,7 +29,7 @@ const content = [
 		title: 'Tim Koehoorn',
 		description:
 		'In mijn 2de semester heb ik samen met mijn groep gewerkt aan de branding voor Tim Koehoorn.',
-		button: 'Discover',
+		button: 'Lees meer',
 		page:'/TimKoehoorn',
 		image: Tim,
 		user: '',
@@ -39,7 +39,7 @@ const content = [
 		title: 'Picoo',
 		description:
 		'In mijn maatwerk semester ben ik samen met een groep gaan werken aan een brandguide voor het bedrijf Picoo.',
-		button: 'Lees verder',
+		button: 'Lees meer',
 		page:'/Picoo',
 		image: PicooHeader,
 		user: '',

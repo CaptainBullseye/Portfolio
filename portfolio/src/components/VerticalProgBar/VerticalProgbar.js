@@ -100,9 +100,18 @@ const info = [
     },
     {
         onderwerp: 'Stage',
+        locatie: 'fruitcake',
+        informatie: 'Mijn stage opdracht was om de UX van het CRM te verbeteren',
+        datum: 'Februari 2020 - Juni 2020',
+        categorie: 'werk',
+        kleur: kleurWerk,
+        iconn: faBriefcase
+    },
+    {
+        onderwerp: 'Stage',
         locatie: 'Uw bedrijf?',
         informatie: 'Stage opdracht',
-        datum: 'Februari 2020 - Juni 2020',
+        datum: 'Augustus 2020 - Januari 2021',
         categorie: 'werk',
         kleur: kleurWerk,
         iconn: faBriefcase

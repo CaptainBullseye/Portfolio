@@ -8,7 +8,7 @@ import './styles.css';
 //Icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpotify, faTwitter} from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf, faBook, faExternalLinkAlt, } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faBook, faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons';
 
 // images
 import NotnBg from "../images/Notn/NOTN-bg.jpg";
