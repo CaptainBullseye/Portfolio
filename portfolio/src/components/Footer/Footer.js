@@ -6,7 +6,7 @@ import { faLinkedin, } from '@fortawesome/free-brands-svg-icons';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import CV from "../Files/CV.pdf";
+import CV from "../Files/cv-2021.pdf";
 
 AOS.init();
 

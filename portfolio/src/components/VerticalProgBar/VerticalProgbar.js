@@ -111,7 +111,7 @@ const info = [
         onderwerp: 'Stage',
         locatie: 'Uw bedrijf?',
         informatie: 'Stage opdracht',
-        datum: 'Augustus 2020 - Januari 2021',
+        datum: 'Februari 2021 - Juni 2021',
         categorie: 'werk',
         kleur: kleurWerk,
         iconn: faBriefcase
