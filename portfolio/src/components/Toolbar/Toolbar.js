@@ -3,32 +3,34 @@ import React from 'react';
 import './ToolbarStyle.css';
 import SidebarToggle from '../SideBar/SideBarToggle';
 import Logo from "../images/logo.png";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faUser, faAddressCard, faHistory, faBookOpen} from '@fortawesome/free-solid-svg-icons';
 
 const tagInfo = [
     {
         page: '/',
-        sub: 'About',
+        sub: <FontAwesomeIcon icon={faUser} style={{ color: "#FFD800", fontSize: "26px" }} />,
         spy: '#about'
     },
     {
         page: '/',
-        sub: 'Tijdlijn',
+        sub: <FontAwesomeIcon icon={faHistory} style={{ color: "#FFD800", fontSize: "26px" }} />,
         spy: '#tijdlijn'
     },
     {
         page: '/NotN',
-        sub: 'Content',
+        sub: <FontAwesomeIcon icon={faBookOpen} style={{ color: "#FFD800", fontSize: "26px" }} />,
         spy: '#content'
     },
     {
         page: '/TimKoehoorn',
-        sub: 'Content',
+        sub: <FontAwesomeIcon icon={faBookOpen} style={{ color: "#FFD800", fontSize: "26px" }} />,
         spy: '#content'
     },
     {
         page: '/Picoo',
-        sub: 'Content',
+        sub: <FontAwesomeIcon icon={faBookOpen} style={{ color: "#FFD800", fontSize: "26px" }} />,
         spy: '#content'
     }
 ];
@@ -57,16 +59,16 @@ const toolbar = props => (
                                                
                         <ul>
                             <li>
-                                <AnchorLink href="#top" offset='100'><strong>Top</strong></AnchorLink>
+                                <AnchorLink href="#top" offset='100'><FontAwesomeIcon icon={faHome} style={{ color: "#FFD800", fontSize: "26px" }} /></AnchorLink>
                             </li>
                             {tag.map((item, index) =>
                                 <li key={index}>
-                                    <AnchorLink offset='80' href={item.spy}><strong>{item.sub}</strong></AnchorLink>
+                                    <AnchorLink offset='80' href={item.spy}>{item.sub}</AnchorLink>
                                     {/* {console.log(item.spy)} */}
                                 </li>)}
                                 
                             <li>
-                                <AnchorLink href="#footer"><strong>Contact</strong></AnchorLink>
+                                <AnchorLink href="#footer"><FontAwesomeIcon icon={faAddressCard} style={{ color: "#FFD800", fontSize: "26px" }} /></AnchorLink>
                             </li>
                         </ul>
                 </div>

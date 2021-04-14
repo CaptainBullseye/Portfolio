@@ -101,17 +101,26 @@ const info = [
     {
         onderwerp: 'Stage',
         locatie: 'fruitcake',
-        informatie: 'Mijn stage opdracht was om de UX van het CRM te verbeteren',
+        informatie: 'Mijn stage opdracht was om de UX van het CRM te verbeteren. Helaas was deze stage vroegtijdig beëindigd vanwege Covid :(',
         datum: 'Februari 2020 - Juni 2020',
         categorie: 'werk',
         kleur: kleurWerk,
         iconn: faBriefcase
     },
     {
+        onderwerp: 'Minor Emerging Technologies Playground',
+        locatie: 'Avans hogeschool',
+        informatie: 'In Februari kon ik eindelijk weer verder met mijn studie. Helaas kon ik geen stage vinden, maar gelukkig had ik van tevoren een afspraak met de Fontys gemaakt waardoor ik al aan mijn Minor kon beginnen',
+        datum: 'Februari 2021 - Juni 2021',
+        categorie: 'school',
+        kleur: kleurSchool,
+        iconn: faGraduationCap
+    },
+    {
         onderwerp: 'Stage',
         locatie: 'Uw bedrijf?',
         informatie: 'Stage opdracht',
-        datum: 'Februari 2021 - Juni 2021',
+        datum: 'Augustus 2021 - Januari 2022',
         categorie: 'werk',
         kleur: kleurWerk,
         iconn: faBriefcase
