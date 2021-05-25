@@ -62,12 +62,6 @@ const ContentSlider = () => (
 						<p style={{fontSize: 16}}><strong>{item.description}</strong></p>
 						<a href={item.page}><button>{item.button}</button></a>
 					</div>
-					{/* <section>
-						<img src={item.userProfile} alt={item.user} />
-						<span>
-							Posted by <strong>{item.user}</strong>
-						</span>
-					</section> */}
 				</div>
 			))}
 		</Slider>

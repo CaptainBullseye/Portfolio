@@ -3,9 +3,6 @@ import './content.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// met json kon ik de images er niet inzetten :(
-// import data from "../Data/contentData.json" 
-
 //images
 import NotnLogo from "../images/Notn/Notn-logo.png";
 import Mat from "../images/Notn/mat.png";
@@ -24,21 +21,13 @@ import Poster from "../images/Picoo/poster.jpg";
 import Scherm from "../images/Picoo/scherm.jpg";
 import PicooCard from "../images/Picoo/Bcard.jpg";
 
+// Later vervangen met een CMS
+
 AOS.init();
 
 const divcontent =
 
-    [
-        // template
-        // ,
-        // {
-        //     titel: "",
-        //     inhoud:
-        //         "",
-        //     afbeelding: Dennis,
-        //     page: "/"
-        // }
-        
+    [        
         // Night of the Nerds dingen hier
         {
             titel: 'Wat is Night of The Nerds?',
@@ -184,13 +173,6 @@ let filteredContent = divcontent.filter(function (filtered) {
     return filtered.page === window.location.pathname;
 });
 
-// var x = 3;
-// var y = 2;
-// var z = x % y;
-// var fotoPos = 'item-foto-left';
-
-// console.log(z);
-
 for (var x = 0; x <= filteredContent.length; x++) {
     var y = 2;
     var z = x % y;
@@ -210,7 +192,6 @@ const Content = () => (
     <React.Fragment>
         {filteredContent.map((e, index) =>
             <section key={index} data-aos="zoom-in" className="item-wrapper" id="content">
-                {/* <img className= {fotoPos} src={e.afbeelding} alt="logo" /> dit 'werkt' maar pakt alleen de laatste waarde en gebruikt deze voor alle foto's */} 
                 <img className= 'item-foto-left' src={e.afbeelding} alt="logo" />
                 <h1 className="item-header">{e.titel}</h1>
                 <div className="item-tekst">

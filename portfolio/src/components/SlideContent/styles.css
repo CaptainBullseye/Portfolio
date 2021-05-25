@@ -62,10 +62,6 @@ button {
   cursor: pointer;
 }
 
-/* button a {
-  text-decoration: none;
-} */
-
 button:hover {
   color: #FFFFFF;
   background: #222222;
@@ -227,18 +223,6 @@ button:hover {
   font-size: 14px;
   display: block;
 }
-
-/* @media (max-height: 500px) {
-  .slider-wrapper, .slide {
-    height: calc(100vh - 75px);
-  }    
-}
-
-@media (max-width: 640px) {
-  .slider-wrapper, .slide {
-    height: calc(80vh - 75px);
-  }    
-} */
 
 @media (max-height: 600px) {
   .slider-content .inner h1 {

@@ -19,7 +19,6 @@ const Footer = () => (
                     data-aos-easing="ease-in-sine"
                     data-aos-duration="500">
                     <h2>Contact</h2>
-                    {/* mail, linkedin, CV,  */}
                     <ul>
                         <li>
                             <a href="mailto:dennisvulders@gmail.com">

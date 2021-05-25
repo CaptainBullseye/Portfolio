@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGraduationCap, faBriefcase, faArchive } from '@fortawesome/free-solid-svg-icons';
 
+// Later vervangen met een CMS
+
 AOS.init({
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -35,14 +37,7 @@ const kleurProjecten = '#e91e63';
 const kleurWerk = '#9C27B0';
 
 const info = [
-    // template
-    // {
-    //     onderwerp: '',
-    //     locatie: '',
-    //     informatie: '',
-    //     datum: '',
-    //     categorie: 
-    // },
+
     {
         onderwerp: 'Havo',
         locatie: 'Dr-Knippenbergcollege',
@@ -74,7 +69,7 @@ const info = [
         onderwerp: 'Cardiff Certificaat',
         locatie: 'Cardiff/Fontys hogescholen',
         informatie: 'Uitwisselings programma naar Cardiff, Wales',
-        datum: '9 April 2018 - 13 April 2018',
+        datum: '9 April 2018 - 16 April 2018',
         categorie: 'school',
         kleur: kleurSchool,
         iconn: faGraduationCap
@@ -127,13 +122,6 @@ const info = [
     }
 ];
 
-
-// var subject = info.filter(function(selected) {
-//     return selected.categorie;
-
-// })
-
-
 class VerticalProgBar extends React.Component {
     constructor(props) {
         super(props)
@@ -154,35 +142,22 @@ class VerticalProgBar extends React.Component {
     }
 
     change(category) {
-        // console.log(currentFilter + " log currentFilter 1")
 
         let filteredData = info.filter(function (selected) {
             return selected.categorie === category;
         });
-        // console.log(filteredData)
 
-        // console.log(currentFilter + " log currentFilter 2")
-        // om een of andere reden neemt de setState category niet over
         this.setState({
             currentFilter: category,
             filteredData: filteredData
         });
-        // console.log(currentFilter)
-        // console.log("function", this.state, this)
-
-        // console.log("this.state.filteredData hieronder")
-        // console.log(this.state.filteredData)
     }
 
     render() {
 
-        // functies met buttons werken maar de map word niet ge-update
-        // console.log(currentFilter)
         return (
-            // Hier gaat het mis
-            <React.Fragment>
 
-                {/* {console.log(filteredData)} filteredData' is not defined */}
+            <React.Fragment>
 
                 <div className="filter-buttons-container" data-aos="zoom-in" id="tijdlijn" >
                     <button className="filter-button" type='button' onClick={() => this.change('school')} >School</button>
@@ -198,18 +173,10 @@ class VerticalProgBar extends React.Component {
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: '#FFD800', color: '#222222' }}
                             VerticalTimeline={{ color: '#222' }}
-                            // contentArrowStyle={{ borderRight: '7px solid  #FFD800' }}
                             date={item.datum}
                             iconStyle={{ background: item.kleur, color: '#fff' }}
                             icon={<FontAwesomeIcon icon={item.iconn} />}
                         >
-                            {/* {console.log("render", this.state.filteredData, this)} */}
-
-                            {/* this.state.filteredData geeft de volledige
-                                lijst weer (alle 7 blokken). de functie word genegeerd. */}
-
-                            {/* {console.log("ronde")} */}
-
                             <h3 className="vertical-timeline-element-title">{item.onderwerp}</h3>
                             <h4 className="vertical-timeline-element-subtitle">{item.locatie}</h4>
                             <p>{item.informatie}</p>
